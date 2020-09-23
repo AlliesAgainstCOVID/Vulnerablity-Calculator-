@@ -1,0 +1,141 @@
+from matplotlib import pyplot as plt
+import numpy as np
+
+from sklearn.linear_model import (
+     LinearRegression)
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import make_pipeline        
+
+week = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths = np.array([1625, 1268, 1178, 1081, 1205, 1324, 1611, 1518, 841]).reshape(-1,1)
+
+model = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel = model.fit(week, deaths) #polynomial regression model
+y_plot = model.predict(week[:, np.newaxis].reshape(-1,1))
+
+week2 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths2 = np.array([1250, 1043, 931, 910, 1028, 1341, 1547, 1484, 818]).reshape(-1,1)
+
+model2 = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel2 = model2.fit(week2, deaths2)
+y_plot2 = model2.predict(week2[:, np.newaxis].reshape(-1,1))
+
+week3 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths3 = np.array([1043, 850, 739, 763, 896, 1137, 1325, 1296, 617]).reshape(-1,1)
+
+model3 = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel3 = model3.fit(week3, deaths3)
+y_plot3 = model3.predict(week3[:, np.newaxis].reshape(-1,1))
+
+week4 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths4 = np.array([571, 564, 493, 512, 568, 728, 835, 754, 391]).reshape(-1,1)
+
+model4 = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel4 = model4.fit(week4, deaths4)
+y_plot4 = model4.predict(week4[:, np.newaxis].reshape(-1,1))
+
+week5 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths5 = np.array([288, 251, 225, 247, 281, 311, 346, 319, 138]).reshape(-1,1)
+
+model5 = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel5 = model5.fit(week5, deaths5)
+y_plot5 = model5.predict(week5[:, np.newaxis].reshape(-1,1))
+
+week6 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths6 = np.array([100, 96, 100, 83, 132, 161, 152, 127, 56]).reshape(-1,1)
+
+model6 = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel6 = model6.fit(week6, deaths6)
+y_plot6 = model6.predict(week6[:, np.newaxis].reshape(-1,1))
+
+week7 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths7 = np.array([40, 49, 32, 30, 56, 61, 65, 46, 12]).reshape(-1,1)
+
+model7 = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel7 = model7.fit(week7, deaths7)
+y_plot7 = model7.predict(week7[:, np.newaxis].reshape(-1,1))
+
+week8 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]).reshape(-1,1)
+deaths8 = np.array([8, 8, 10, 13, 21, 24, 19, 15, 4]).reshape(-1,1)
+
+model8 = make_pipeline(PolynomialFeatures(3), LinearRegression())
+fittingmodel8 = model8.fit(week8, deaths8)
+y_plot8 = model8.predict(week8[:, np.newaxis].reshape(-1,1))
+
+# BACK-END COMPONENT(CALCULATION THAT REFERS TO THE GRAPHS)
+age = int(input("Please type your age(numeric form).\n")) 
+month = input("Numbers for Months(Ex: Jan = 1, Feb = 2, March = 3 ):\n")
+if(month == "06"):
+  x = 0 #AUGUST IS REPRESENTED BY WEEK 1
+  j8 = 1293 # total deaths(June)for 0-24 years age group 
+  j7 = 1508 # total deaths(June)for 25-34 years age group 
+  j6 = 1991 # total deaths(June)for 35-44 years age group 
+  j5 = 3669 # total deaths(June)for 45-54 years age group
+  j4 = 7733 # total deaths(June)for 55-64 years age group
+  j3 = 11398 # total deaths(June)for 65-74 years age group
+  j2 = 13621 # total deaths(June)for 75-84 years age group
+  j = 16768 # total deaths(June)for 85 and Above years age group
+elif(month== "07"):
+  x = 4 # JULY IS REPRESENTED BY WEEK 5
+  j8 = 1167 # total deaths(July) for 0-24 years age group 
+  j7 = 1352 # total deaths(July)for 25-34 years age group 
+  j6 = 1871 # total deaths(July)for 35-44 years age group 
+  j5 = 3382 # total deaths(July)for 45-54 years age group
+  j4 = 7571 # total deaths(July)for 55-64 years age group
+  j3 = 11033 # total deaths(July)for 65-74 years age group
+  j2 = 13168 # total deaths(July)for 75-84 years age group
+  j  = 16191 # total deaths(July)for 85 and Above years age group
+elif(month == "08"):
+  x = 8 # AUGUST IS REPRESENTED BY WEEK 9
+  j8 = 560 # total deaths(August) for 0-24 years age group 
+  j7 = 786 # total deaths(August)for 25-34 years age group 
+  j6 = 1156 # total deaths(August)for 35-44 years age group 
+  j5 = 2081 # total deaths(August)for 45-54 years age group
+  j4 = 4902 # total deaths(August)for 55-64 years age group
+  j3 = 7702 # total deaths(August)for 65-74 years age group
+  j2 = 10023 # total deaths(August)for 75-84 years age group
+  j = 12249 # total deaths(August)for 85 and Above years age group
+
+if(age>=0 and age <=24):
+  z8 = model8.predict(week8[x].reshape(-1,1)) # predicting COVID-19 death counts for the corresponding month
+  print(z8)
+  probability8 = (z8/j8)*100 #total deaths - (total deaths - predicted COVID-19 death counts )
+  print("Probability of Dying from COVID-19:", probability8, "%")
+elif(age>=25 and  age<=34):
+  z7 = model7.predict(week7[x].reshape(-1,1))
+  print(z7)
+  probability7 = (z7/j7)*100
+  print("Probability of Dying from COVID-19:", probability7, "%")
+elif(age>=35 and  age<=44):
+  z6 = model6.predict(week6[x].reshape(-1,1))
+  print(z6)
+  probability6 = (z6/j6)*100
+  print("Probability of Dying from COVID-19:", probability6, "%")
+elif(age>=45 and age<=54):
+  z5 = model5.predict(week5[x].reshape(-1,1))
+  print(z5)
+  probability5 = (z5/j5)*100
+  print("Probability of Dying from COVID-19:", probability5, "%")
+elif(age>=55 and age<=64):
+  z4 = model4.predict(week4[x].reshape(-1,1))
+  print(z4)
+  probability4 = (z4/j4)*100
+  print("Probability of Dying from COVID-19:", probability4, "%")
+elif(age>=65 and age<=74):
+  z3 = model3.predict(week3[x].reshape(-1,1))
+  print(z3)
+  probability3 = (z3/j3)*100
+  print("Probability of Dying from COVID-19:", probability3, "%")
+elif(age>=75 and age<=84):
+  z2 = model2.predict(week2[x].reshape(-1,1))
+  print(z2)
+  probability2 = (z2/j2)*100
+  print("Probability of Dying from COVID-19:", probability2, "%")
+elif(age>=85):
+   z = model.predict(week[x].reshape(-1,1))
+   probability = (z/j)*100
+   print("Probability of Dying from COVID-19:", probability, "%")
+# formula: total deaths(including covid)/noncovid-deaths(total deaths - covid deaths)
+# covid-19 deaths(z8)/total deaths(j8)
+# increase in deaths/total deaths = (covid-19 deaths + non-covid-19 deaths)-noncovid-19 deaths/covid-19 + non-covid-19 deaths
