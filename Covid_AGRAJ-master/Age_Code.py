@@ -1,13 +1,18 @@
-from matplotlib import pyplot as plt
 import numpy as np
-from sklearn.linear_model import (LinearRegression)
 import pandas as pd
+import requests
+import io 
+from matplotlib import pyplot as plt
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline  
-import AgeCOVID-19DeathsData.csv 
+from sklearn.linear_model import (LinearRegression)
 
-user = input("Age:")
-def agedataframe(user):
+
+def agedataframe(age):
+  url = ""
+  download = requests.get(url).content
+  df = pd.read_csv(io.StringIO(download.decode('utf-8')))
+  
   df = pd.read_csv("AgeCOVID-19DeathsData.csv") 
   df.drop(df[df['Age Group'] != user].index, inplace = True) # Dropping death counts data for all age groups except the one selected by user
   columns = df.columns
@@ -34,7 +39,9 @@ def agedataframe(user):
   y_plot = model.predict(week[:, np.newaxis].reshape(-1,1))
   length = len(week)
   covid = int(model.predict(week[length-2].reshape(-1,1)))
+  
+  # Using total deaths data to calculate the scale factor that COVID-19 increases or decreases the number of deaths for an age group by
   alldeaths = int(numerictotal[length-1].reshape(-1,1))
-  probability = int((covid/alldeaths)*100)
-  print(probability)
-agedataframe(user)
+  probability = int((covid/alldeaths)*100) # covid-19 deaths / total deaths(including covid-19) 
+  return probability 
+agedataframe(age)
