@@ -12,7 +12,7 @@ st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width
 st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
 
-st.sidebar.text ("")
+# A st.sidebar.text ("")
 #st.sidebar.text ("")
 
 gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
@@ -22,8 +22,8 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
             "Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
             "New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
             "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"))
-st.sidebar.text ("")
-st.sidebar.text ("")
+# A st.sidebar.text ("")
+# A st.sidebar.text ("")
 
 st.sidebar.text ("Does your state do the following:")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
@@ -34,8 +34,8 @@ NPI5 = st.sidebar.checkbox ("Non-essential business closures?")
 NPI6 = st.sidebar.checkbox ("Stay at home orders (with exemptions)?")
 NPI7 = st.sidebar.checkbox ("Measures to isolate symptomatic individuals and their contacts?")
 
-st.sidebar.text ("")
-st.sidebar.text ("")
+# A st.sidebar.text ("")
+# A st.sidebar.text ("")
 
 def user_input_features():
         data = {'gender': gender,
@@ -226,8 +226,8 @@ def aggregate_calc():
     return z
 output_df3 = aggregate_calc()
 
-st.sidebar.text ("")
-st.sidebar.text ("")
+# A st.sidebar.text ("")
+# A st.sidebar.text ("")
 
 st.subheader ('User inputs:')
 st.write(input_df)
