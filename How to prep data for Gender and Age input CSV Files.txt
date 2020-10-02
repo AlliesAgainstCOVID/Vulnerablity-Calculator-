@@ -1,0 +1,14 @@
+How to Prep data for the input csv files
+
+
+A. Gender:
+
+	1. Download file from https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-W/vsak-wrfu/data
+	2. Save as CSV for Excel locally
+	3. Open file in excel. 
+		a. Delete all rows where Sex  = "ALL SEX".      # This removes rows for (Male+Female) death counts
+		b. Delete all rows where Age Group <> "All ages" # This gives us the sum of deaths across age groups for each week
+		c. Delete all rows where End Week = <Empty> # There will be 2 rows - one for male and one for female. These are the total Male and female deaths
+		d. Sort by End week column
+	4. Save as  "GenderCOVID-19DeathsData.csv" .
+	5. Upload to Github under Covid_AGRAJ-master/.
