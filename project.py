@@ -25,7 +25,7 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
 # A st.sidebar.text ("")
 # A st.sidebar.text ("")
 
-st.sidebar.text ("Does your state do the following:")
+st.sidebar.text ("Does your state do the following!")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
 NPI2 = st.sidebar.checkbox ("Mandatory Mask-wearing in public spaces?")
 NPI3 = st.sidebar.checkbox ("School closures?")
