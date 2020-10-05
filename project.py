@@ -238,7 +238,9 @@ output_df3 = aggregate_calc()
 # A st.text ("")
 
 
-image = Image.open('AI_19_image.jpg')
+#image = Image.open('AI_19_image.jpg')
+image = Image.open('Image1.JPG')
+
 
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
 #im_resized = image.resize((image.width, 300))
