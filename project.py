@@ -6,10 +6,10 @@ import plotly.graph_objects as go
 from PIL import Image
 import custom_gauge as cg
 
-image = Image.open('AI_19_image.jpg')
+#image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
-st.image.update_layout(height = 300)
+#st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
+
 
 st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
@@ -237,6 +237,9 @@ output_df3 = aggregate_calc()
 # A st.text ("")
 # A st.text ("")
 
+image = Image.open('AI_19_image.jpg')
+st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+#st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
 st.write("""
 ## Mortality Rate:
 """)
