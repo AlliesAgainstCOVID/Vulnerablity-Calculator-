@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 from PIL import Image
 import custom_gauge as cg
 
-image = Image.open('COVID_Agraj_image.jpg')
+image = Image.open('AI_19_image.jpg')
 st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 st.sidebar.header ("Select your inputs")
