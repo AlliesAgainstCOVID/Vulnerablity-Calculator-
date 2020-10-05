@@ -237,6 +237,7 @@ output_df3 = aggregate_calc()
 # A st.text ("")
 # A st.text ("")
 
+st.subheader("Image 001")
 image = Image.open('AI_19_image.jpg')
 
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
