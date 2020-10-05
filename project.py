@@ -10,6 +10,7 @@ import custom_gauge as cg
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
 
+local_css("style.css")
 
 st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
@@ -274,3 +275,7 @@ fig = go.Figure(go.Indicator(
 fig.update_layout(height = 100)
 #fig.show()
 #st.write(fig)
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
