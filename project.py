@@ -251,9 +251,7 @@ st.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_
 #""")
 
 if st.sidebar.button('Submit'):
-         st.write("""
-            ### Mortality Rate:
-         """)
+        st.write(""" ### Mortality Rate: """)
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
         #AGE PERSONALIZED MESSAGE. 
