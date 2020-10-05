@@ -240,6 +240,8 @@ output_df3 = aggregate_calc()
 image = Image.open('AI_19_image.jpg')
 st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
+im_resized = image.resize((image.width, 400))
+
 st.write("""
 ## Mortality Rate:
 """)
