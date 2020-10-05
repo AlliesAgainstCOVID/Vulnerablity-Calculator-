@@ -23,3 +23,9 @@
 .st-bf {
     padding-top: 0px;
 }
+
+.Widget>label {
+    font-size: .0rem;
+    color: #262730;
+    margin-bottom: .4rem;
+}
