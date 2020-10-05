@@ -14,7 +14,7 @@ df.drop(df[df['Sex'] != user].index, inplace = True) # Dropping death counts dat
   
    # Storing death counts in arrays
   i = 0
-  week = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 32, 33, 34 ]).reshape(-1,1)
+  week = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ]).reshape(-1,1)
   while i < len(df.index): 
      deaths = np.append(deaths, df.iloc[i, first]) # Need to access index[i][first]
      totaldeaths = np.append(totaldeaths, df.iloc[i, second]) #[i][second ]
