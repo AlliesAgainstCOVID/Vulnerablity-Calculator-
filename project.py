@@ -8,7 +8,7 @@ import custom_gauge as cg
 
 image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=none, height=none)
+st.image (image, caption='A COVID-19 Mortality Risk Predictor', width='None')
 
 st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
