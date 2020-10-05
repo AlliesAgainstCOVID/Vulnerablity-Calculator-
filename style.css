@@ -16,3 +16,10 @@
     width: 3em;
 }
 
+.st-bg {
+    padding-bottom: 0px;
+}
+
+.st-bf {
+    padding-top: 0px;
+}
