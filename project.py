@@ -25,7 +25,7 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
 # A st.sidebar.text ("")
 # A st.sidebar.text ("")
 
-st.sidebar.text ("Does your state do the following!")
+st.sidebar.text ("Does your state do the following?")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
 NPI2 = st.sidebar.checkbox ("Mandatory Mask-wearing in public spaces?")
 NPI3 = st.sidebar.checkbox ("School closures?")
@@ -218,7 +218,7 @@ def output_state():
             data = 1.19
         c = data
         return c
-output_df6 = output_state()
+output_df6 = output_state() 
 
 def aggregate_calc():
     data = (((output_df1+output_df2+output_df4+output_df6)/4)*output_df5)
@@ -229,11 +229,11 @@ output_df3 = aggregate_calc()
 # A st.sidebar.text ("")
 # A st.sidebar.text ("")
 
-st.subheader ('User inputs:')
-st.write(input_df)
+# A st.subheader ('User inputs:')
+# A st.write(input_df)
 
-st.text ("")
-st.text ("")
+# A st.text ("")
+# A st.text ("")
 
 st.write("""
 ## Mortality Rate:
