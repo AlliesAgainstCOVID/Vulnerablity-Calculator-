@@ -251,6 +251,9 @@ st.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_
 #""")
 
 if st.sidebar.button('Submit'):
+         st.write("""
+            ### Mortality Rate:
+         """)
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
         #AGE PERSONALIZED MESSAGE. 
@@ -270,6 +273,6 @@ fig = go.Figure(go.Indicator(
     #delta = {'reference': 100},
     domain = {'x': [0, 1], 'y': [0, 1]},
     title = {'text': "Score"}))
-fig.update_layout(height = 300)
+fig.update_layout(height = 100)
 #fig.show()
 #st.write(fig)
