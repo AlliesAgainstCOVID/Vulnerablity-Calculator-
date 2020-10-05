@@ -7,7 +7,7 @@ from PIL import Image
 import custom_gauge as cg
 
 image = Image.open('AI-19.jpg')
-# A st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
