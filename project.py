@@ -16,7 +16,8 @@ def local_css(file_name):
 
 local_css("style.css")
 
-st.sidebar(fixed=True)
+#st.sidebar(fixed=True)
+st.beta_set_page_config(initial_sidebar_state="expanded")
 st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
 
