@@ -241,12 +241,12 @@ st.subheader("Image 001")
 image = Image.open('AI_19_image.jpg')
 
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
-im_resized = image.resize((image.width, 300))
-st.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+#im_resized = image.resize((image.width, 300))
+st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
-st.write("""
-## Mortality Rate:
-""")
+#st.write("""
+### Mortality Rate:
+#""")
 
 if st.sidebar.button('Submit'):
         cg.render_gauge((int(output_df3)))
