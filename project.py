@@ -25,7 +25,7 @@ st.layout.columns:
     st.write('Some explainer copy inbetween charts.')
   st.layout.column:
     st.write('Some explainer copy inbetween charts.')
-st.sidebar(fixed=True)
+#st.sidebar(fixed=True)
 #st.set_page_config(initial_sidebar_state="expanded")
 #st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
