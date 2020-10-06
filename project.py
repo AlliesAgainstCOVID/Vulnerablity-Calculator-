@@ -16,6 +16,11 @@ def local_css(file_name):
 
 local_css("style.css")
 
+st.beta_set_page_config(
+	page_title="Ex-stream-ly Cool App",
+	layout="wide",
+	initial_sidebar_state="expanded",
+)
 
 #st.sidebar(fixed=True)
 #st.set_page_config(initial_sidebar_state="expanded")
