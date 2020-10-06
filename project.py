@@ -9,6 +9,11 @@ import custom_gauge as cg
 #image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
+st.beta_set_page_config(
+	page_title="Ex-stream-ly Cool App",
+	layout="wide",
+	initial_sidebar_state="expanded"
+)
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -16,11 +21,7 @@ def local_css(file_name):
 
 local_css("style.css")
 
-st.beta_set_page_config(
-	page_title="Ex-stream-ly Cool App",
-	layout="wide",
-	initial_sidebar_state="expanded"
-)
+
 
 #st.sidebar(fixed=True)
 #st.set_page_config(initial_sidebar_state="expanded")
