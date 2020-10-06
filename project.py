@@ -17,14 +17,6 @@ def local_css(file_name):
 local_css("style.css")
 
 
-st.layout.columns:
-  st.layout.column:
-    st.write('Some explainer copy inbetween charts 1.')
-    #st.button
-  st.layout.column(width = 'one-third'):
-    st.write('Some explainer copy inbetween charts.')
-  st.layout.column:
-    st.write('Some explainer copy inbetween charts.')
 #st.sidebar(fixed=True)
 #st.set_page_config(initial_sidebar_state="expanded")
 #st.sidebar.header ("Select your inputs")
