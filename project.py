@@ -274,11 +274,11 @@ if st.sidebar.button('Submit'):
                 st.markdown(""" Statistical analysis on CDC Data shows that older age groups 65 years and above are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. If you have any underlying medical conditions, it’s also recommended to talk with your doctor and healthcare provider for working on a care plan that can help for emergencies during the pandemic. 
                 Learn more here: 
 	        https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
-		else:
-			st.markdown(""" Please  continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.""", unsafe_allow_html=True)
-			image2 = Image.open('DontWaitSelfIsolate_01.jpg')	 
-        		im_resized2 = image2.resize((image2.width, 100)) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
-			st.image2(im_resized2, use_column_width=True) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
+	else:
+		st.markdown(""" Please  continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.""", unsafe_allow_html=True)
+		image2 = Image.open('DontWaitSelfIsolate_01.jpg')	 
+        	im_resized2 = image2.resize((image2.width, 100)) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
+		st.image2(im_resized2, use_column_width=True) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
 #cg.render_gauge((int(output_df3))
 
 fig = go.Figure(go.Indicator(
