@@ -253,17 +253,15 @@ output_df3 = aggregate_calc()
 
 imageLocation = st.empty()
 
-#image = Image.open('AI_19_image.jpg')
-image = Image.open('Image1.JPG')
-
-
+image = Image.open('AI_19_image.JPG')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
 im_resized = image.resize((image.width, 200))
 imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
-#st.write("""
-### Your Mortality Rate
-#""")
+# A #st.write("""
+# a ### Your Mortality Rate
+#A #""")
+st.markdown("<h1 style='text-align: center; color: red;'>Your Mortality Rate</h1>", unsafe_allow_html=True)
 
 if st.sidebar.button('Submit'):
         image = Image.open('2AI_19_image.jpg')
@@ -278,7 +276,9 @@ if st.sidebar.button('Submit'):
            #Learn more here: 
 	#https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html")
         st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.")
-        image = Image.open('DontWaitSelfIsolate.JPG')	     
+        image = Image.open('DontWaitSelfIsolate.JPG')	 
+	im_resized = image.resize((image.width, 100))
+	imageLocation.image (im_resized, use_column_width=True)
 #cg.render_gauge((int(output_df3)))
 
 fig = go.Figure(go.Indicator(
