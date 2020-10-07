@@ -255,7 +255,7 @@ output_df3 = aggregate_calc()
 
 imageLocation = st.empty()
 
-imageone = Image.open('AI_19_image_01.jpg')
+imageone = Image.open('AI_19_image_02.jpg')
 #st.image(imageone, caption='A COVID-19 Mortality Risk Predictor', width=None)
 #im_resizedone = imageone.resize((100, 80))
 imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', width=None)
@@ -263,7 +263,7 @@ imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', wi
 if st.sidebar.button('Submit'):
         imagetwo = Image.open('2AI_19_image_01.jpg')
         #im_resizedtwo = imagetwo.resize((50,30)) #comment this if it doesn't work
-        imageLocation.image(imagetwo, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+        imageLocation.image(imagetwo, caption='A COVID-19 Mortality Risk Predictor', width=None)
         # AH - This did not work st.subheader('Your Mortality Rate')
         #st.write(""" ### Mortality Rate: """)
         st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
@@ -278,7 +278,7 @@ if st.sidebar.button('Submit'):
                 st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.")
         image2 = Image.open('DontWaitSelfIsolate_01.jpg')	 
         #im_resized2 = image2.resize((image2.width, 100))
-        st.image(image2, use_column_width=True)
+        st.image(image2, width=None)
 #cg.render_gauge((int(output_df3))
 
 fig = go.Figure(go.Indicator(
