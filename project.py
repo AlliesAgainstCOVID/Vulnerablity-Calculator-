@@ -255,14 +255,14 @@ imageLocation = st.empty()
 
 image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
-im_resized = image.resize((image.width, 200))
+#im_resized = image.resize((image.width, 200))
 imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 if st.sidebar.button('Submit'):
         image = Image.open('2AI_19_image.jpg')
-        im_resized = image.resize((image.width, 200))
+        im_resized = image.resize((image.width, 100))
         imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-        st.write(""" ################ Your Mortality Rate """)
+        st.write("""                         Your Mortality Rate """)
 	#st.markdown("<h1 style='text-align: center; color: red;'>Your Mortality Rate</h1>", unsafe_allow_html=True)  #AH: I would like to make this work, not sure what's incorrect here....
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
