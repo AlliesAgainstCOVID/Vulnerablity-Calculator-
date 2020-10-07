@@ -64,7 +64,7 @@ def render_gauge(value):
 
     <script>
     /* Set radius for all circles */
-    var r = 250;
+    var r = 200;
     var circles = document.querySelectorAll('.circle');
     var total_circles = circles.length;
     for (var i = 0; i < total_circles; i++) {
