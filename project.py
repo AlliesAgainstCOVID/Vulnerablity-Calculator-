@@ -40,9 +40,8 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
 # A st.sidebar.text ("")
 # A st.sidebar.text ("")
 
-#st.sidebar.text ("Does your state do the following?")
-st.text ("")
 st.sidebar.subheader ("Does your state do the following?")
+st.text ("")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
 NPI2 = st.sidebar.checkbox ("Mandatory Mask-wearing in public spaces?")
 NPI3 = st.sidebar.checkbox ("School closures?")
@@ -243,16 +242,6 @@ def aggregate_calc():
     return z
 output_df3 = aggregate_calc()
 
-# A st.sidebar.text ("")
-# A st.sidebar.text ("")
-
-# A st.subheader ('User inputs:')
-# A st.write(input_df)
-
-# A st.text ("")
-# A st.text ("")
-
-
 imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_05.jpg')
@@ -262,10 +251,7 @@ imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', us
 
 if st.sidebar.button('Submit'):
         imagetwo = Image.open('2AI_19_image_01.jpg')
-        #im_resizedtwo = imagetwo.resize((50,30)) #comment this if it doesn't work
         imageLocation.image(imagetwo, caption='A COVID-19 Mortality Risk Predictor', width=None)
-        # AH - This did not work st.subheader('Your Mortality Rate')
-        #st.write(""" ### Mortality Rate: """)
         st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
