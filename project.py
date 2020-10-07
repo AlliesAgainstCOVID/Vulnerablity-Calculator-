@@ -257,16 +257,16 @@ imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_01.jpg')
 #st.image(imageone, caption='A COVID-19 Mortality Risk Predictor', width=None)
-im_resizedone = imageone.resize((imageone.width, 100))
+im_resizedone = imageone.resize((100, 80))
 imageLocation.image (im_resizedone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 if st.sidebar.button('Submit'):
         imagetwo = Image.open('2AI_19_image_01.jpg')
-        im_resizedtwo = imagetwo.resize((imagetwo.width,100)) #comment this if it doesn't work
+        im_resizedtwo = imagetwo.resize((50,30)) #comment this if it doesn't work
         imageLocation.image(im_resizedtwo, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
         # AH - This did not work st.subheader('Your Mortality Rate')
         #st.write(""" ### Mortality Rate: """)
-        st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)  #AH: I would like to make this work, not sure what's incorrect here....
+        st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
 	#AGE PERSONALIZED MESSAGE. 
@@ -277,8 +277,8 @@ if st.sidebar.button('Submit'):
         else:
                 st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.")
         image2 = Image.open('DontWaitSelfIsolate_01.jpg')	 
-        im_resized2 = image2.resize((image2.width, 100)) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
-        st.image2(im_resized2, use_column_width=True) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
+        im_resized2 = image2.resize((image2.width, 100))
+        st.image(im_resized2, use_column_width=True)
 #cg.render_gauge((int(output_df3))
 
 fig = go.Figure(go.Indicator(
