@@ -257,8 +257,8 @@ imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_01.jpg')
 #st.image(imageone, caption='A COVID-19 Mortality Risk Predictor', width=None)
-im_resizedone = imageone.resize((100, 80))
-imageLocation.image (im_resizedone, caption='A COVID-19 Mortality Risk Predictor', width=None)
+#im_resizedone = imageone.resize((100, 80))
+imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', width=None)
 
 if st.sidebar.button('Submit'):
         imagetwo = Image.open('2AI_19_image_01.jpg')
