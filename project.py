@@ -41,6 +41,7 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
 # A st.sidebar.text ("")
 
 #st.sidebar.text ("Does your state do the following?")
+st.text ("")
 st.sidebar.subheader ("Does your state do the following?")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
 NPI2 = st.sidebar.checkbox ("Mandatory Mask-wearing in public spaces?")
@@ -255,8 +256,8 @@ output_df3 = aggregate_calc()
 imageLocation = st.empty()
 
 image = Image.open('AI_19_image.jpg')
-st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
-im_resized = image.resize((image.width, 300))
+#st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
+im_resized = image.resize((image.width, 200))
 imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 if st.sidebar.button('Submit'):
