@@ -255,13 +255,13 @@ output_df3 = aggregate_calc()
 
 imageLocation = st.empty()
 
-image = Image.open('AI_19_image.jpg')
+image = Image.open('AI_19_image_01.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
 im_resized = image.resize((image.width, 300))
 imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 if st.sidebar.button('Submit'):
-        image = Image.open('2AI_19_image.jpg')
+        image = Image.open('2AI_19_image_01.jpg')
         im_resized = image.resize((image.width, 100))
         imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
         # AH - This did not work st.subheader('Your Mortality Rate')
