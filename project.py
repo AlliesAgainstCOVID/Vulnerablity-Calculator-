@@ -264,9 +264,9 @@ st.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_
 #""")
 
 if st.sidebar.button('Submit'):
-	image = Image.open('COVID_Agraj_image.jpg')
-	im_resized = image.resize((image.width, 200))
-	st.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+        image = Image.open('COVID_Agraj_image.jpg')
+        im_resized = image.resize((image.width, 200))
+        st.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
         st.write(""" ### Mortality Rate: """)
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
