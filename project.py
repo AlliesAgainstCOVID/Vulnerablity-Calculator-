@@ -32,7 +32,7 @@ local_css("style.css")
 
 gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
 age = st.sidebar.selectbox("Select Age group",("Under 1 year", "1-4 years", "5-14 years", "15-24 years", "25-34 years", "35-44 years", "45-54 years", "55-64 years", "65-74 years", "75-84 years", "85 years and over"))
-race = st.sidebar.selectbox("Select your Race",("White", "Black", "Asian", "LatinX", "American Indian/Alaskan Native", "Others"))
+race = st.sidebar.selectbox("Select your Race",("White", "Black", "Asian", "LatinX", "American Indian/Alaskan Native", "Native Hawaiian and Pacific Islander", "Multi-Racial"))
 state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colarado", "Connecticut","Delaware","Florida", "Georgia","Hawaii",
             "Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
             "New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
@@ -266,18 +266,19 @@ imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', 
 #""")
 
 if st.sidebar.button('Submit'):
-        image = Image.open('COVID_Agraj_image.jpg')
+        image = Image.open('2AI_19_image.jpg')
         im_resized = image.resize((image.width, 200))
         imageLocation.image (im_resized, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-        st.write(""" ### Mortality Rate: """)
+        st.write(""" ### Your Mortality Rate """)
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
         #AGE PERSONALIZED MESSAGE. 
         #if age == "65-74 years" or age == "75-84 years" or age == "85 years and over":
-            #st.write("Statistical analysis on CDC Data shows that older age groups(65 years and Above) are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. If you have any underlying medical conditions, it’s also recommended to talk with your doctor and healthcare provider for working on a care plan that can help for emergencies during the pandemic. 
-            #Learn more here:
-            #https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html")
+            st.write("Statistical analysis on CDC Data shows that older age groups(65 years and Above) are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. If you have any underlying medical conditions, it’s also recommended to talk with your doctor and healthcare provider for working on a care plan that can help for emergencies during the pandemic. 
+            Learn more here:
+            https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html")
         st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.")
+	 image = Image.open('DontWaitSelfIsolate.JPG')	     
 #cg.render_gauge((int(output_df3)))
 
 fig = go.Figure(go.Indicator(
