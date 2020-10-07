@@ -257,12 +257,12 @@ imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_01.jpg')
 #st.image(imageone, caption='A COVID-19 Mortality Risk Predictor', width=None)
-im_resizedone = imageone.resize((imageone.width, 300))
+im_resizedone = imageone.resize((imageone.width, 100))
 imageLocation.image (im_resizedone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 if st.sidebar.button('Submit'):
         imagetwo = Image.open('2AI_19_image_01.jpg')
-        im_resizedtwo = imagetwo.resize(imagetwo.width,100) #comment this if it doesn't work
+        im_resizedtwo = imagetwo.resize((imagetwo.width,100)) #comment this if it doesn't work
         imageLocation.image(im_resizedtwo, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
         # AH - This did not work st.subheader('Your Mortality Rate')
         #st.write(""" ### Mortality Rate: """)
