@@ -275,9 +275,9 @@ if st.sidebar.button('Submit'):
                 Learn more here: 
 	        https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
 	else:
-		st.write("Please  continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.")
+		st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.")
 		image2 = Image.open('DontWaitSelfIsolate_01.jpg')	 
-        	im_resized2 = image2.resize((image2.width, 100)) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
+        	im_resized2 = image2.resize((100, 100)) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
 		st.image2(im_resized2, use_column_width=True) #AH - I am not sure why this is erroring out as "inconsistent use of tabs and spaces in indentation"
 #cg.render_gauge((int(output_df3))
 
