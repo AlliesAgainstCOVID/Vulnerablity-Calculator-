@@ -256,14 +256,14 @@ output_df3 = aggregate_calc()
 imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_01.jpg')
-#st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
-#im_resized = image.resize((image.width, 300))
+st.imageone (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
+im_resizedone = imageone.resize((image.width, 300))
 imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 if st.sidebar.button('Submit'):
         imagetwo = Image.open('2AI_19_image_01.jpg')
         im_resizedtwo = imagetwo.resize((imagetwo.width, 100)) #comment this if it doesn't work
-        imageLocation.image (im_resizedtwo, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+        imageLocation.imagetwo (im_resizedtwo, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
         # AH - This did not work st.subheader('Your Mortality Rate')
         #st.write(""" ### Mortality Rate: """)
         st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)  #AH: I would like to make this work, not sure what's incorrect here....
