@@ -48,7 +48,7 @@ st.sidebar.subheader ("Does your state do the following?")
 st.text ("")
 #NPI3 = st.sidebar.checkbox ("School closures?") AH- Commented out based on our 10/9 mtg discussion
 NPI4 = st.sidebar.checkbox ("Mass gathering restrictions?")
-NPI5 = st.sidebar.checkbox ("Non-essential business closures?")
+NPI5 = st.sidebar.checkbox  ("Limited business re-openings?")#("Non-essential business closures?")
 #NPI6 = st.sidebar.checkbox ("Stay at home orders (with exemptions)?") AH- Commented out based on our 10/9 mtg discussion
 NPI7 = st.sidebar.checkbox ("Measures to isolate symptomatic individuals and their contacts?")
 
@@ -124,7 +124,7 @@ output_df4 = output_age()
 
 def output_NPI():
         data = None
-        if NPI1 == 1 & NPI2 == 1 & NPI3 == 1 & NPI4 == 1 & NPI5 == 1 & NPI6 == 1 & NPI7 == 1:
+        if NPI1 == 1 & NPI2 == 1 & NPI4 == 1 & NPI5 == 1 & NPI7 == 1: #Removed NPI 3 & 6
             data = 0.18
         else:
             data = 1
