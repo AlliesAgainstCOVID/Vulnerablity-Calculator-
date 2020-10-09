@@ -39,15 +39,17 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
             "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"))
 # A st.sidebar.text ("")
 # A st.sidebar.text ("")
-
-st.sidebar.subheader ("Does your state do the following?")
+st.sidebar.subheader ("Do you do the following?")
 st.text ("")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
 NPI2 = st.sidebar.checkbox ("Mandatory Mask-wearing in public spaces?")
-NPI3 = st.sidebar.checkbox ("School closures?")
+st.text ("")
+st.sidebar.subheader ("Does your state do the following?")
+st.text ("")
+#NPI3 = st.sidebar.checkbox ("School closures?") AH- Commented out based on our 10/9 mtg discussion
 NPI4 = st.sidebar.checkbox ("Mass gathering restrictions?")
 NPI5 = st.sidebar.checkbox ("Non-essential business closures?")
-NPI6 = st.sidebar.checkbox ("Stay at home orders (with exemptions)?")
+#NPI6 = st.sidebar.checkbox ("Stay at home orders (with exemptions)?") AH- Commented out based on our 10/9 mtg discussion
 NPI7 = st.sidebar.checkbox ("Measures to isolate symptomatic individuals and their contacts?")
 
 # A st.sidebar.text ("")
@@ -60,10 +62,10 @@ def user_input_features():
                 'state': state,
                 'NPI1': NPI1,
                 'NPI2': NPI2,
-                'NPI3': NPI3,
+                #'NPI3': NPI3,
                 'NPI4': NPI4,
                 'NPI5': NPI5,
-                'NPI6': NPI6,
+                #'NPI6': NPI6,
                 'NPI7': NPI7}
         features = pd.DataFrame (data,index=[0])
         return features
@@ -262,7 +264,7 @@ if st.sidebar.button('Submit'):
 	        https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
         else:
                 st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible.")
-        image2 = Image.open('DontWaitSelfIsolate_01.jpg')	 
+        #image2 = Image.open('DontWaitSelfIsolate_01.jpg')  AH- Commented out based on our 10/9 mtg discussion	 
         #im_resized2 = image2.resize((image2.width, 100))
         st.image(image2, width=None)
 #cg.render_gauge((int(output_df3))
