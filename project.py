@@ -266,7 +266,7 @@ if st.sidebar.button('Submit'):
                 st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor and healthcare provider for working on a care plan that can help for emergencies during the pandemic. ")
         #image2 = Image.open('DontWaitSelfIsolate_01.jpg')  AH- Commented out based on our 10/9 mtg discussion	 
         #im_resized2 = image2.resize((image2.width, 100))
-        st.image(image2, width=None)
+        #st.image(image2, width=None)
 #cg.render_gauge((int(output_df3))
 
 fig = go.Figure(go.Indicator(
