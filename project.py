@@ -253,8 +253,8 @@ imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', us
 
 if st.sidebar.button('Submit'):
         imagetwo = Image.open('AI_19_image_05.jpg')
-	im_resizedtwo = imagetwo.resize((600,40))
-        imageLocation.image(imagetwo, caption='A COVID-19 Mortality Risk Predictor', width=600)
+	im_resizedtwo = imagetwo.resize((600, 40))
+        imageLocation.image(im_resizedtwo)
         st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
         cg.render_gauge((int(output_df3)))
         #st.write(cg.render_gauge((int(output_df3))))
