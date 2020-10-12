@@ -263,6 +263,7 @@ if st.sidebar.button('Submit'):
                 st.markdown(""" Statistical analysis on CDC Data shows that older age groups 65 years and above are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. 
                 Learn more here: 
 	        https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
+	#Other statements
 	if (age != "Under 1 year" or age != "1-4 years") and NPI2 == 0:
 		st.markdown("""We strongly urge you to please start wearing masks when going out to public areas. According to the CDC, there are many studies that show masks can prevent the spread of respiratory droplets from the mouth, nose, and parts of the face. This is for your safety and others.
 		Learn more here: 
