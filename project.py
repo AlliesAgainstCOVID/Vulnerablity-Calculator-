@@ -274,6 +274,8 @@ if st.sidebar.button('Submit'):
         #im_resized2 = image2.resize((image2.width, 100))
         #st.image(image2, width=None)
         #cg.render_gauge((int(output_df3))
+  else:
+	st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = output_df3,
