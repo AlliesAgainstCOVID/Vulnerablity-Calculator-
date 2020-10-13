@@ -5,7 +5,9 @@ from sklearn import datasets
 import plotly.graph_objects as go
 from PIL import Image
 import custom_gauge as cg
-
+import Age_Code as ag
+import Gender_Code as gen
+import Race_Code as rc
 #image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
