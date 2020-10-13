@@ -8,6 +8,7 @@ import custom_gauge as cg
 import Age_Code as ag
 import Gender_Code as gen
 import Race_Code as rc
+import Location_Code as loc
 #image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
