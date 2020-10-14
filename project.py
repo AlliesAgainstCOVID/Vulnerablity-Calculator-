@@ -79,7 +79,7 @@ input_df = user_input_features()
 #def output_gender():
 	#probability = gender_data(gender)
 	#return probability 
-#genderoutput = output_gender()
+#gender_output = output_gender()
 
 def output_gender():
        data = None
@@ -95,7 +95,7 @@ output_df1 = output_gender ()
 #def output_race():
 	#probability = functiontouse(race)
 	#return probability
-#raceoutput = output_race()
+#race_output = output_race()
 def output_race():
         data = None
         if race == 'White':
@@ -120,7 +120,7 @@ output_df2 = output_race()
 #def output_age():
 	#probability = agedataframe(age)
 	#return probability 
-#ageoutput = output_age()
+#age_output = output_age()
 
 def output_age():
         data = None
@@ -152,7 +152,7 @@ def output_NPI():
             data = 1
         b = data
         return b
-output_df5 = output_NPI()
+NPI_output = output_NPI()
 
 def output_state():
         data = None
@@ -260,11 +260,20 @@ def output_state():
         return c
 output_df6 = output_state() 
 
+#FINAL PROBABILITY CALCULATION
+#def aggregate_calc():
+    #data = (((age_output + gender_output + race_output + location_output)/4)*NPI_output)
+    #final_probability = data
+    #return final_probability
+#finalprob = aggregate_calc()
+
 def aggregate_calc():
     data = (((output_df1+output_df2+output_df4+output_df6)/4)*output_df5)
     z = data
     return z
 output_df3 = aggregate_calc()
+
+
 
 imageLocation = st.empty()
 
