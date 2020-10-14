@@ -75,6 +75,12 @@ def user_input_features():
 
 input_df = user_input_features()
 
+#GENDER CODE(FRONT END AND BACK END INTEGRATION)
+#def output_gender():
+	#probability = gender_data(gender)
+	#return probability 
+#genderoutput = output_gender()
+
 def output_gender():
        data = None
        if gender == 'Male':
@@ -85,6 +91,11 @@ def output_gender():
        return x
 output_df1 = output_gender ()
 
+#RACE CODE(FRONT END AND BACK END INTEGRATION)
+#def output_race():
+	#probability = functiontouse(race)
+	#return probability
+#raceoutput = output_race()
 def output_race():
         data = None
         if race == 'White':
@@ -102,6 +113,14 @@ def output_race():
         y = data
         return y
 output_df2 = output_race()
+
+
+
+#AGE CODE(FRONT END AND BACK END INTEGRATION)
+#def output_age():
+	#probability = agedataframe(age)
+	#return probability 
+#ageoutput = output_age()
 
 def output_age():
         data = None
