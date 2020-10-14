@@ -142,18 +142,20 @@ def multiracial(input):
  
  
 #MAIN PROGRAM STARTS HERE!!!!!!!!!
-
-if (input = white):
- white(0)
-if (input = black):
- black(0)
-if (input = latinx):
- latinx(0)
-if (input = asian):
- asian(0)
-if (input = aian):
- aian(0)
-if (input = nhpi):
- nhpi(0)
-if (input = multiracial):
- multiracial(0)
+def functiontouse(input):
+ if input == 'White':
+  probability = white(input)
+ elif input == 'Black':
+  probability = black(input)
+ elif input == 'LatinX':
+  probability = latinx(input)
+elif input == 'Asian':
+  probability = asian(input)
+elif input == 'American Indian/Alaskan Native':
+  probability = aian(input)
+elif input == 'Native Hawaiian and Pacific Islander':
+  probability = nhpi(input)
+else:
+  probability = multiracial(input)
+return probability 
+    
