@@ -293,7 +293,8 @@ if st.sidebar.button('Submit'):
         st.write("Please continue to social distance and wear a mask in public. Keep at least 6 feet between you and others at all times. Do not be within contact for longer than 10 minutes. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor and healthcare provider for working on a care plan that can help for emergencies during the pandemic. ")
 # No results yet: add instructions, bigger image
 else:
-    st.markdown(" NO results so far")
+    imageone = Image.open('AI_19_image_05.jpg')
+    st.markdown("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = output_df3,
