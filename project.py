@@ -77,16 +77,6 @@ def output_gender():
 	return probability 
 gender_output = output_gender()
 
-#def output_gender():
-       #data = None
-       #if gender == 'Male':
-               #data = 12.19
-       #else:
-               #data = 11.73
-       #x = data
-       #return x
-#output_df1 = output_gender ()
-
 #RACE CODE(FRONT END AND BACK END INTEGRATION)
 def output_race():
 	probability = functiontouse(race)
