@@ -294,7 +294,7 @@ if st.sidebar.button('Submit'):
 # No results yet: add instructions, bigger image
 else:
     imageone = Image.open('AI_19_image_05.jpg')
-    st.markdown("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
+    st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
 
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = output_df3,
