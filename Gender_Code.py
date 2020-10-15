@@ -4,6 +4,7 @@ from matplotlib import pyplot as plt
 from sklearn.linear_model import (LinearRegression)
  
 def gender_data(a):
+#AH df = pd.read_csv("Covid_AGRAJ-master/GenderCOVID-19DeathsData.csv")
 df = pd.read_csv("GenderCOVID-19DeathsData.csv")
 df.drop(df[df['Sex'] != user].index, inplace = True) # Dropping death counts data for other gender group, except the one selected by user
  columns = df.columns 
