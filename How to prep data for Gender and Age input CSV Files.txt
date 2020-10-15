@@ -12,3 +12,12 @@ A. Gender:
 		d. Sort by End week column
 	4. Save as  "GenderCOVID-19DeathsData.csv" .
 	5. Upload to Github under Covid_AGRAJ-master/.
+	
+B. Age
+       1. Download file from https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-W/vsak-wrfu/data
+       2. Before exporting set the following filters: "End Week is after 06/01/2020" and "Sex is All Sex".
+       3. Export the CSV and save for Excel locally 
+       4. Open with excel
+       5 Convert to float *NEED TO CHECK
+       6. Save as "AgeCOVID-19DeathsData.csv"
+       7. Upload to Github under Covid_AGRAJ-master/.
