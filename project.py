@@ -283,7 +283,7 @@ if st.sidebar.button('Submit'):
     cg.render_gauge((int(output_df3)))
     #st.write(cg.render_gauge((int(output_df3))))
     #AGE PERSONALIZED MESSAGE.
-    if age == "65-74 years" or age == "75-84 years" or age == "85 years and over":
+    #if age == "65-74 years" or age == "75-84 years" or age == "85 years and over":
         st.markdown(""" Statistical analysis on CDC Data shows that older age groups 65 years and above are more vulnerable to COVID-19, which is consistent with sources such as the World Health Organization. To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to outside environments like care facilities. 
         Learn more here: 
 	https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
@@ -294,7 +294,7 @@ if st.sidebar.button('Submit'):
 	#https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html """, unsafe_allow_html=True
     #else:
 	#st.write("Please continue to social distance and wear a mask in public. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor for working on a care plan that can help for emergencies during the pandemic.")
-    else:
+    #else:
 	st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
 fig = go.Figure(go.Indicator(
