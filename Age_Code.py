@@ -3,7 +3,6 @@ from sklearn.linear_model import (LinearRegression)
 import pandas as pd
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline        
-import AgeCOVID-19Deaths
 
 def agedataframe(age):
   #AH- df = pd.read_csv("Covid_AGRAJ-master/AgeCOVID-19DeathsData.csv")
