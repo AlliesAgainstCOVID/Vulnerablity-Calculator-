@@ -76,73 +76,73 @@ def user_input_features():
 input_df = user_input_features()
 
 #GENDER CODE(FRONT END AND BACK END INTEGRATION)
-#def output_gender():
-	#probability = gender_data(gender)
-	#return probability 
-#gender_output = output_gender()
-
 def output_gender():
-       data = None
-       if gender == 'Male':
-               data = 12.19
-       else:
-               data = 11.73
-       x = data
-       return x
-output_df1 = output_gender ()
+	probability = gender_data(gender)
+	return probability 
+gender_output = output_gender()
+
+#def output_gender():
+       #data = None
+       #if gender == 'Male':
+               #data = 12.19
+       #else:
+               #data = 11.73
+       #x = data
+       #return x
+#output_df1 = output_gender ()
 
 #RACE CODE(FRONT END AND BACK END INTEGRATION)
-#def output_race():
-	#probability = functiontouse(race)
-	#return probability
-#race_output = output_race()
 def output_race():
-        data = None
-        if race == 'White':
-            data = 4.85
-        elif race == 'Black':
-            data = 10.38
-        elif race == 'Asian':
-            data = 4.15
-        elif race == 'LatinX':
-            data = 5.08
-        elif race == 'American Indian/Alaskan Native':
-            data = 6.56
-        else:
-            data = 7.83
-        y = data
-        return y
-output_df2 = output_race()
+	probability = functiontouse(race)
+	return probability
+race_output = output_race()
+#def output_race():
+        #data = None
+        #if race == 'White':
+            #data = 4.85
+        #elif race == 'Black':
+            #data = 10.38
+        #elif race == 'Asian':
+            #data = 4.15
+        #elif race == 'LatinX':
+            #data = 5.08
+        #elif race == 'American Indian/Alaskan Native':
+            #data = 6.56
+        #else:
+            #data = 7.83
+        #y = data
+        #return y
+#output_df2 = output_race()
 
 
 
-#AGE CODE(FRONT END AND BACK END INTEGRATION)
-#def output_age():
-	#probability = agedataframe(age)
-	#return probability 
-#age_output = output_age()
-
+#NEW AGE CODE(FRONT END AND BACK END INTEGRATION)
 def output_age():
-        data = None
-        if age == '0-24':
-            data = 0.60
-        elif age == '25-34':
-            data = 1.68
-        elif age == '35-44':
-            data = 5.03
-        elif age == '45-54':
-            data = 7.52
-        elif age == '55-64':
-            data = 8.92
-        elif age == '65-74':
-            data = 9.15
-        elif age == '75-84':
-            data = 9.04
-        else:
-            data = 7.61
-        a = data
-        return a
-output_df4 = output_age()
+	probability = agedataframe(age)
+	return probability 
+age_output = output_age()
+
+#def output_age():
+        #data = None
+        #if age == '0-24':
+            #data = 0.60
+        #elif age == '25-34':
+            #data = 1.68
+        #elif age == '35-44':
+            #data = 5.03
+        #elif age == '45-54':
+            #data = 7.52
+        #elif age == '55-64':
+            #data = 8.92
+        #elif age == '65-74':
+            #data = 9.15
+        #elif age == '75-84':
+            #data = 9.04
+        #else:
+            #data = 7.61
+        #a = data
+        #return a
+#output_df4 = output_age()
 
 def output_NPI():
         data = None
