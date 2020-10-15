@@ -7,7 +7,7 @@ from sklearn.linear_model import (LinearRegression)
 
 
 def agedataframe(age):
-  df = pd.read_csv("Covid_AGRAJ-master/AgeCOVID-19DeathsData.csv")
+  df = pd.read_csv("AgeCOVID-19DeathsData.csv")
   df.drop(df[df['Age Group'] != user].index, inplace = True) # Dropping death counts data for all age groups except the one selected by user
   columns = df.columns
   first = columns.get_loc("COVID-19 Deaths")
