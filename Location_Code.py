@@ -50,7 +50,7 @@ def location_data():
     val1 = clf.predict([[date_pred]])
     a = (totaldeaths.get(state))
     final_location = val1/a*100
-
-    print("\nLocation percentage is " + str(final_location) + "%")
+    return final_location
+    #print("\nLocation percentage is " + str(final_location) + "%")
     
 location_data()
