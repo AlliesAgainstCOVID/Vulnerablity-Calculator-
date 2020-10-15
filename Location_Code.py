@@ -53,4 +53,3 @@ def location_data():
     return final_location
     #print("\nLocation percentage is " + str(final_location) + "%")
     
-location_data()
