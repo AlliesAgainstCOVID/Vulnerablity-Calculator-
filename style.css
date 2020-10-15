@@ -27,22 +27,17 @@
 .fullScreenFrame > div {
     display: flex;
     justify-content: center;
-    
-    @keyframes blink {
-
+ 
+ /* Blinking sidepanel arrow */ 
+@keyframes blink {
     0% { border-color: #f63366; }
-
     50% { border-color: #FFFFFF; }
-
     100% { border-color: #f63366; }
-
 }
-
 .sidebar-collapse-control button{
     animation: blink 1.0s linear infinite;
-
 }
-    
+ /* To remove empty space on top of the page */    
 .sidebar .sidebar-content{
     padding: 0.5rem 0.5rem!important;
 }
