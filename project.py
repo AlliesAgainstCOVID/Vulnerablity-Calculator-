@@ -92,52 +92,14 @@ def output_race():
 	probability = functiontouse(race)
 	return probability
 race_output = output_race()
-#def output_race():
-        #data = None
-        #if race == 'White':
-            #data = 4.85
-        #elif race == 'Black':
-            #data = 10.38
-        #elif race == 'Asian':
-            #data = 4.15
-        #elif race == 'LatinX':
-            #data = 5.08
-        #elif race == 'American Indian/Alaskan Native':
-            #data = 6.56
-        #else:
-            #data = 7.83
-        #y = data
-        #return y
-#output_df2 = output_race()
 
-#NEW AGE CODE(FRONT END AND BACK END INTEGRATION)
+#AGE CODE(FRONT END AND BACK END INTEGRATION)
 def output_age():
 	probability = agedataframe(age)
 	return probability 
 age_output = output_age()
 
-#def output_age():
-        #data = None
-        #if age == '0-24':
-            #data = 0.60
-        #elif age == '25-34':
-            #data = 1.68
-        #elif age == '35-44':
-            #data = 5.03
-        #elif age == '45-54':
-            #data = 7.52
-        #elif age == '55-64':
-            #data = 8.92
-        #elif age == '65-74':
-            #data = 9.15
-        #elif age == '75-84':
-            #data = 9.04
-        #else:
-            #data = 7.61
-        #a = data
-        #return a
-#output_df4 = output_age()
-
+# NPI CODE
 def output_NPI():
         data = None
         if NPI1 == 1 & NPI2 == 1 & NPI3 == 1 & NPI4 == 1 & NPI5 == 1:
@@ -148,124 +110,17 @@ def output_NPI():
         return b
 NPI_output = output_NPI()
 
-def output_state():
-        data = None
-        if state == 'Alabama':
-            data = 5.52
-        elif state == 'Alaska':
-            data = 1.14
-        elif state == 'Arizona':
-            data = 8.77
-        elif state == 'Arkansas':
-            data = 2.68
-        elif state == 'California':
-            data = 6.32
-        elif state == 'Colorado':
-            data = 8.54
-        elif state == 'Connecticut':
-            data = 30.24
-        elif state == 'Delaware':
-            data = 12.88
-        elif state == 'Florida':
-            data = 5.77
-        elif state == 'Georgia':
-            data = 8.83
-        elif state == 'Hawaii':
-            data = 0.51
-        elif state == 'Idaho':
-            data = 2.40
-        elif state == 'Illinois':
-            data = 14.22
-        elif state == 'Indiana':
-            data = 9.47
-        elif state == 'Iowa':
-            data = 6.10
-        elif state == 'Kansas':
-            data = 2.76
-        elif state == 'Kentucky':
-            data = 3.30
-        elif state == 'Louisiana':
-            data = 16.79
-        elif state == 'Maine':
-            data = 1.81
-        elif state == 'Maryland':
-            data = 13.47
-        elif state == 'Massachusetts':
-            data = 27.02
-        elif state == 'Michigan':
-            data = 13.68
-        elif state == 'Minnesota':
-            data = 7.74
-        elif state == 'Mississippi':
-            data = 9.31
-        elif state == 'Missouri':
-            data = 4.13
-        elif state == 'Montana':
-            data = 1.03
-        elif state == 'Nebraska':
-            data = 4.12
-        elif state == 'Nevada':
-            data = 6.03
-        elif state == 'New Hampshire':
-            data = 6.80
-        elif state == 'New Jersey':
-            data = 34.52
-        elif state == 'New Mexico':
-            data = 6.95
-        elif state == 'New York':
-            data = 48.16
-        elif state == 'North Carolina':
-            data = 4.87
-        elif state == 'North Dakota':
-            data = 2.81
-        elif state == 'Ohio':
-            data = 6.08
-        elif state == 'Oklahoma':
-            data = 2.97
-        elif state == 'Oregon':
-            data = 1.75
-        elif state == 'Pennsylvania':
-            data = 11.64
-        elif state == 'Rhode Island':
-            data = 20.52
-        elif state == 'South Carolina':
-            data = 5.50
-        elif state == 'South Dakota':
-            data = 3.32
-        elif state == 'Tennessee':
-            data = 2.62
-        elif state == 'Texas':
-            data = 5.22
-        elif state == 'Utah':
-            data = 2.86
-        elif state == 'Vermont':
-            data = 2.21
-        elif state == 'Virginia':
-            data = 6.33
-        elif state == 'Washington':
-            data = 5.63
-        elif state == 'West Virginia':
-            data = 1.49
-        elif state == 'Wisconsin':
-            data = 3.66
-        else:
-            data = 1.19
-        c = data
-        return c
-output_df6 = output_state() 
+
+# LOCATION CODE 
+
 
 #FINAL PROBABILITY CALCULATION
-#def aggregate_calc():
-    #data = (((age_output + gender_output + race_output + location_output)/4)*NPI_output)
-    #final_probability = data
-    #return final_probability
-#finalprob = aggregate_calc()
-
 def aggregate_calc():
-    data = (((output_df1+output_df2+output_df4+output_df6)/4)*output_df5)
-    z = data
-    return z
-output_df3 = aggregate_calc()
+    data = (((age_output + gender_output + race_output + location_output)/4)*NPI_output)
+    final_probability = data
+    return final_probability
+finalprob = aggregate_calc()
+
 
 imageLocation = st.empty()
 
@@ -297,7 +152,7 @@ else:
     st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
 
 fig = go.Figure(go.Indicator(
-    mode = "number+gauge+delta", value = output_df3,
+    mode = "number+gauge+delta", value = finalprob,
     gauge = {
     'shape': "bullet"},
     #'axis': {'range': [None, 100]},
