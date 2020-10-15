@@ -4,6 +4,25 @@ import streamlit.components.v1 as components
 def render_gauge(value):
     components.html('''
     <style>
+    body{
+      transition: 200ms all;
+      transform: scale(0.4)
+    }
+    @media only screen and (min-width: 400px) {
+      body{
+        transform: scale(0.6)
+      }
+    }
+    @media only screen and (min-width: 600px) {
+      body{
+        transform: scale(0.8)
+      }
+    }
+    @media only screen and (min-width: 1000px) {
+      body{
+        transform: scale(1)
+      }
+    } 
     #wrapper {
       position: relative;
       margin: auto;
