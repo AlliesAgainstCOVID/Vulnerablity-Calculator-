@@ -146,7 +146,7 @@ else:
     imageone = Image.open('AI_19_image_05.jpg')
     st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
 #st.write("Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com")
-#st.write("Disclaimer: ")
+#st.write("Disclaimer: Please note that the information in this web app is not medical advice but rather precautionary guidelines. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. All information is for educational purposes only. Thank you!")
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
     gauge = {
