@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from sklearn.linear_model import (LinearRegression)
  
 def gender_data(a):
-df = pd.read_csv("Covid_AGRAJ-master/GenderCOVID-19DeathsData.csv")
+df = pd.read_csv("GenderCOVID-19DeathsData.csv")
 df.drop(df[df['Sex'] != user].index, inplace = True) # Dropping death counts data for other gender group, except the one selected by user
  columns = df.columns 
   first = columns.get_loc("COVID-19 Deaths")
@@ -36,33 +36,3 @@ df.drop(df[df['Sex'] != user].index, inplace = True) # Dropping death counts dat
   probability = int((covid/alldeaths)*100) # covid-19 deaths / total deaths(including covid-19) 
   return probability 
 gender_data(a)
-
-
-/* OLD CODE
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
- 
-def gender_data(a):
-  
- if (a == 1):
-     val1 = 419.58 + 2088.8*(9)
-     val2 = 419.58 + 2088.8*(8)
-     val3 = ((val1-val2)/val2)*100 
-     final_gender = []
-     final_gender.append(val3)
-     print(final_gender)
-     return(final_gender)
- if (a == 2):
-     val1 =  917.36 + 1757.2*(9)
-     val2  =  917.36 + 1757.2*(8)
-     val3 = ((val1-val2)/val2)*100 
-     final_gender = []
-     final_gender.append(val3)
-     print(final_gender)
-     return(final_gender)
-
-gender = input("Enter your gender: \n")
-g = gender_data(gender)    */
