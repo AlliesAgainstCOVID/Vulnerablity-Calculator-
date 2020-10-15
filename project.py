@@ -300,7 +300,7 @@ if st.sidebar.button('Submit'):
 	#Learn more here: 
 	#https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html """, unsafe_allow_html=True)
     else:
-	st.write("Please continue to social distance and wear a mask in public. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor for working on a care plan that can help for emergencies during the pandemic""")
+	st.write("Please continue to social distance and wear a mask in public. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor for working on a care plan that can help for emergencies during the pandemic.")
     else:
 	st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
