@@ -12,10 +12,12 @@ import Location_Code as loc
 #image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
-st.beta_set_page_config(
-	layout="wide",
-	initial_sidebar_state="expanded"
-)
+
+#The code below was to keep the sidebar expanded. We won't need this as we have the blinking arrows and txt that says click here to input your data 
+#st.beta_set_page_config(
+#	layout="wide",
+#	initial_sidebar_state="expanded"
+#)
 
 def local_css(file_name):
     with open(file_name) as f:
