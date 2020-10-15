@@ -9,6 +9,7 @@ import Age_Code as ag
 import Gender_Code as gen
 import Race_Code as rc
 import Location_Code as loc
+
 #image = Image.open('AI_19_image.jpg')
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
@@ -108,8 +109,6 @@ race_output = output_race()
         #y = data
         #return y
 #output_df2 = output_race()
-
-
 
 #NEW AGE CODE(FRONT END AND BACK END INTEGRATION)
 def output_age():
@@ -279,6 +278,7 @@ imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', us
 # With results: no instructions, gauge, help text, banner image
 
 if st.sidebar.button('Submit'):
+    image = Image.open('AI_19Logo.jpg')	
     st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(output_df3)))
     #AGE PERSONALIZED MESSAGE. 
