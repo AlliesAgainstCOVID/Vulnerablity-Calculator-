@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
-df = pd.read_csv("Covid_AGRAJ-master/RaceDeathCOVIDFinal.csv")
+#df = pd.read_csv("Covid_AGRAJ-master/RaceDeathCOVIDFinal.csv")
+df = pd.read_csv("RaceDeathCOVIDFinal.csv")
 
 white_population = 160626928
 black_population = 31140331
