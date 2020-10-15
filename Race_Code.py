@@ -16,7 +16,7 @@ aian_population = 1818958
 nhpi_population = 448851
 multiracial_population = 4158826
 
-def white(input):
+def white(): #REMOVED INPUT BEING PASSED IN AS UNNECESSARY SINCE IT ISN'T BEING USED-KV
  f = df["Deaths_White"].groupby(df["Deaths_White"].index // 56).sum() # grouping white deaths
  a = f.astype(np.int) # converting the type
  normalized = []
@@ -31,10 +31,10 @@ def white(input):
 
 
  probability = (y_plot[33]*100)
- return(probability)
+ return probability
 
  
-def black(input):
+def black():
  f = df["Deaths_Black"].groupby(df["Deaths_Black"].index // 56).sum() # grouping black deaths
  a = f.astype(np.int) # converting the type
  normalized = []
@@ -49,10 +49,10 @@ def black(input):
 
 
  probability = (y_plot[33]*100)
- return(probability)
+ return probability
 
 
-def latinx(input):
+def latinx():
  f = df["Deaths_LatinX"].groupby(df["Deaths_LatinX"].index // 56).sum() # grouping latinx deaths
  a = f.astype(np.int) # converting the type
  normalized = []
@@ -67,10 +67,10 @@ def latinx(input):
 
 
  probability = (y_plot[33]*100)
- return(probability)
+ return probability
 
  
-def asian(input):
+def asian():
  f = df["Deaths_Asian"].groupby(df["Deaths_Asian"].index // 56).sum() # grouping asian deaths
  a = f.astype(np.int)  # converting the type
  normalized = []
@@ -85,10 +85,10 @@ def asian(input):
 
 
  probability = (y_plot[33]*100)
- return(probability)
+ return probability
 
  
-def aian(input): 
+def aian(): 
  f = df["Deaths_AIAN"].groupby(df["Deaths_AIAN"].index // 56).sum() # grouping American Indian/Alaskan Native deaths
  a = f.astype(np.int) # converting the type
  normalized = []
@@ -103,10 +103,10 @@ def aian(input):
 
 
  probability = (y_plot[33]*100)
- return(probability)
+ return probability
  
  
-def nhpi(input): 
+def nhpi(): 
  f = df["Deaths_NHPI"].groupby(df["Deaths_NHPI"].index // 56).sum() # grouping Native Hawaiian and Pacific Islander deaths
  a = f.astype(np.int) # converting the type
  normalized = []
@@ -121,10 +121,10 @@ def nhpi(input):
 
 
  probability = (y_plot[33]*100)
- return(probability)
+ return probability
  
  
-def multiracial(input):
+def multiracial():
  f = df["Deaths_Multiracial"].groupby(df["Deaths_Multiracial"].index // 56).sum() # grouping multiracial deaths
  a = f.astype(np.int) # converting the type
  normalized = []
@@ -139,7 +139,7 @@ def multiracial(input):
 
 
  probability = (y_plot[33]*100)
- return(probability)
+ return probability
  
  
  
@@ -147,18 +147,18 @@ def multiracial(input):
 #EDITED BY KAVYA
 def functiontouse(input):
  if input == 'White':
-  probability = white(input)
+  probability = white()
  elif input == 'Black':
-  probability = black(input)
+  probability = black()
  elif input == 'LatinX':
-  probability = latinx(input)
+  probability = latinx()
  elif input == 'Asian':
-  probability = asian(input)
+  probability = asian()
  elif input == 'American Indian/Alaskan Native':
-  probability = aian(input)
+  probability = aian()
  elif input == 'Native Hawaiian and Pacific Islander':
-  probability = nhpi(input)
+  probability = nhpi()
  else:
-  probability = multiracial(input)
+  probability = multiracial()
 return probability 
     
