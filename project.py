@@ -30,7 +30,6 @@ st.sidebar.subheader ("Select your inputs")
 #st.sidebar.header ("Select your inputs")
 #st.sidebar.subheader ("Select your inputs")
 
-# A st.sidebar.text ("")
 #st.sidebar.text ("")
 
 gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
@@ -41,7 +40,6 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
             "New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
             "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"))
 # A st.sidebar.text ("")
-# A st.sidebar.text ("")
 st.sidebar.subheader ("Do you:")
 st.text ("")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
@@ -49,13 +47,10 @@ NPI2 = st.sidebar.checkbox ("Wear mask in public spaces?")
 st.text ("")
 st.sidebar.subheader ("Does your state:")
 st.text ("")
-#NPI3 = st.sidebar.checkbox ("School closures?") AH- Commented out based on our 10/9 mtg discussion
-NPI4 = st.sidebar.checkbox ("Restrict mass gatherings?")
-NPI5 = st.sidebar.checkbox  ("Limit business re-openings?")#("Non-essential business closures?")
-#NPI6 = st.sidebar.checkbox ("Stay at home orders (with exemptions)?") AH- Commented out based on our 10/9 mtg discussion
-NPI7 = st.sidebar.checkbox ("Take measures to isolate symptomatic individuals and their contacts?")
+NPI3 = st.sidebar.checkbox ("Restrict mass gatherings?")
+NPI4 = st.sidebar.checkbox  ("Limit business re-openings?")#("Non-essential business closures?")
+NPI5 = st.sidebar.checkbox ("Take measures to isolate symptomatic individuals and their contacts?")
 
-# A st.sidebar.text ("")
 # A st.sidebar.text ("")
 
 def user_input_features():
@@ -65,11 +60,9 @@ def user_input_features():
                 'state': state,
                 'NPI1': NPI1,
                 'NPI2': NPI2,
-                #'NPI3': NPI3,
+                'NPI3': NPI3,
                 'NPI4': NPI4,
-                'NPI5': NPI5,
-                #'NPI6': NPI6,
-                'NPI7': NPI7}
+                'NPI5': NPI5}
         features = pd.DataFrame (data,index=[0])
         return features
 
@@ -146,7 +139,7 @@ age_output = output_age()
 
 def output_NPI():
         data = None
-        if NPI1 == 1 & NPI2 == 1 & NPI4 == 1 & NPI5 == 1 & NPI7 == 1: #Removed NPI 3 & 6
+        if NPI1 == 1 & NPI2 == 1 & NPI3 == 1 & NPI4 == 1 & NPI5 == 1:
             data = 0.18
         else:
             data = 1
@@ -273,8 +266,6 @@ def aggregate_calc():
     return z
 output_df3 = aggregate_calc()
 
-
-
 imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_05.jpg')
@@ -300,7 +291,7 @@ if st.sidebar.button('Submit'):
 	#Learn more here: 
 	#https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html """, unsafe_allow_html=True)
     else:
-	st.write("Please continue to social distance and wear a mask in public. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor for working on a care plan that can help for emergencies during the pandemic.")
+	st.markdown(""" Please continue to social distance and wear a mask in public. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor for working on a care plan that can help for emergencies during the pandemic.""")
     else:
 	st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
