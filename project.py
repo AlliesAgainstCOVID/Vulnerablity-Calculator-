@@ -99,6 +99,12 @@ def output_age():
 	return probability 
 age_output = output_age()
 
+# LOCATION CODE 
+def output_location():
+	probability = location_data(state)
+	return probability
+location_output = output_location()
+
 # NPI CODE
 def output_NPI():
         data = None
@@ -111,7 +117,6 @@ def output_NPI():
 NPI_output = output_NPI()
 
 
-# LOCATION CODE 
 
 
 #FINAL PROBABILITY CALCULATION
