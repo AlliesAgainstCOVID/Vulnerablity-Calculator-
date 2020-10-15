@@ -1,9 +1,8 @@
 import numpy as np
-import pandas as pd
-from matplotlib import pyplot as plt
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.pipeline import make_pipeline  
 from sklearn.linear_model import (LinearRegression)
+import pandas as pd
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import make_pipeline        
 
 
 def agedataframe(age):
