@@ -14,7 +14,7 @@ A. Gender:
 	5. Upload to Github under Covid_AGRAJ-master/.
 	
 B. Age
-       1. Download file from https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-W/vsak-wrfu/data
+       1. Go to https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-W/vsak-wrfu/data
        2. Before exporting set the following filters: "End Week is after 06/01/2020" and "Sex is All Sex".
        3. Export the CSV and save for Excel locally 
        4. Open with excel
