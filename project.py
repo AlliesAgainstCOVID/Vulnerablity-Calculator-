@@ -145,7 +145,8 @@ if st.sidebar.button('Submit'):
 else:
     imageone = Image.open('AI_19_image_05.jpg')
     st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
-
+#st.write("Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com")
+#st.write("Disclaimer: ")
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
     gauge = {
