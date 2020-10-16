@@ -36,4 +36,3 @@ def gender_data(user):
  alldeaths = int(numerictotal[length-1].reshape(-1,1))
  probability = int((covid/alldeaths)*100) # covid-19 deaths / total deaths(including covid-19) 
  return probability 
-gender_data(user)
