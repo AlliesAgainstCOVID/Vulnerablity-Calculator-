@@ -59,11 +59,11 @@ NPI5 = st.sidebar.checkbox ("Take measures to isolate symptomatic individuals an
  #dropdown = for month (has to be in 08 format for single digit months and 11 for double digit months)
  #dropdown = for year (2020 default)
  
- st.sidebar.subheader("Date:")
- month = st.sidebar.selectbox("Select month",("October", "November", "December))
- day = st.sidebar.selectbox("Select day", ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"))					   
- year = st.text("2020")
- st.text("")				      
+st.sidebar.subheader("Date:")
+month = st.sidebar.selectbox("Select month",("October", "November", "December))
+day = st.sidebar.selectbox("Select day", ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"))					   
+year = st.text("2020")
+st.text("")				      
 
 # A st.sidebar.text ("")
 
