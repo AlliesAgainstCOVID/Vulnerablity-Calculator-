@@ -45,7 +45,7 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
 # A st.sidebar.text ("")
 st.sidebar.subheader ("Do you:")
 st.text ("")
-NPI1 = st.sidebar.checkbox ("Practice social distancing?")
+NPI1 = st.sidebar.checkbox ("Practice social distancing?")27
 NPI2 = st.sidebar.checkbox ("Wear mask in public spaces?")
 st.text ("")
 st.sidebar.subheader ("Does your state:")
@@ -58,7 +58,12 @@ NPI5 = st.sidebar.checkbox ("Take measures to isolate symptomatic individuals an
  #dropdown = for day
  #dropdown = for month (has to be in 08 format for single digit months and 11 for double digit months)
  #dropdown = for year (2020 default)
-
+ 
+ st.sidebar.subheader("Date:")
+ month = st.sidebar.selectbox("Select month",("October", "November", "December))
+ day = st.sidebar.selectbox("Select day", ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"))					   
+ year = st.text("2020")
+ st.text("")				      
 
 # A st.sidebar.text ("")
 
@@ -67,6 +72,9 @@ def user_input_features():
                 'age': age,
                 'race': race,
                 'state': state,
+		'month': month,
+		'day': day,
+		'year': year,
                 'NPI1': NPI1,
                 'NPI2': NPI2,
                 'NPI3': NPI3,
@@ -97,8 +105,8 @@ age_output = output_age()
 
 # LOCATION CODE 
 def output_location():
-	#strdate = year+month+date
-	probability = location_data(state) #add in strdate once it is inititalized#
+	strdate = year+month+date
+	probability = location_data(state, strdate) #add in strdate once it is inititalized#
 	return probability
 location_output = output_location()
 
