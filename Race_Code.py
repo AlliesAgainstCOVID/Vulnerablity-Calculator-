@@ -160,5 +160,5 @@ def functiontouse(input):
   probability = nhpi()
  else:
   probability = multiracial()
-return probability 
+ return probability 
     
