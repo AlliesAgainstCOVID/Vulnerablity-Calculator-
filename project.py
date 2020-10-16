@@ -87,7 +87,7 @@ st.text("")
 
 #GENDER CODE(FRONT END AND BACK END INTEGRATION)
 def output_gender():
-	probability = gender_data(gender)
+	probability = gen.gender_data(gender)
 	return probability 
 gender_output = output_gender()
 
