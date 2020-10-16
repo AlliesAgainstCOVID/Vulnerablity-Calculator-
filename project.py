@@ -53,6 +53,12 @@ st.text ("")
 NPI3 = st.sidebar.checkbox ("Restrict mass gatherings?")
 NPI4 = st.sidebar.checkbox  ("Limit business re-openings?")#("Non-essential business closures?")
 NPI5 = st.sidebar.checkbox ("Take measures to isolate symptomatic individuals and their contacts?")
+ 
+ #URGENT : NEED TO ADD THE DROPDOWNS FOR DATE
+ #dropdown = for day
+ #dropdown = for month (has to be in 08 format for single digit months and 11 for double digit months)
+ #dropdown = for year (2020 default)
+
 
 # A st.sidebar.text ("")
 
@@ -91,7 +97,8 @@ age_output = output_age()
 
 # LOCATION CODE 
 def output_location():
-	probability = location_data(state)
+	#strdate = year+month+date
+	probability = location_data(state) #add in strdate once it is inititalized#
 	return probability
 location_output = output_location()
 
