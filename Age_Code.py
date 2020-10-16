@@ -37,4 +37,3 @@ def agedataframe(age):
   alldeaths = int(numerictotal[length-1].reshape(-1,1))
   probability = int((covid/alldeaths)*100) # FORMULA: covid-19 deaths / total deaths(including covid-19) 
   return probability 
-agedataframe(age)
