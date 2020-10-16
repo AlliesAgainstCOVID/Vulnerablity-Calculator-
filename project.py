@@ -67,23 +67,23 @@ st.text("")
 
 # A st.sidebar.text ("")
 
-def user_input_features():
-        data = {'gender': gender,
-                'age': age,
-                'race': race,
-                'state': state,
-		'month': month,
-		'day': day,
-		'year': year,
-                'NPI1': NPI1,
-                'NPI2': NPI2,
-                'NPI3': NPI3,
-                'NPI4': NPI4,
-                'NPI5': NPI5}
-        features = pd.DataFrame (data,index=[0])
-        return features
+#def user_input_features():
+        #data = {'gender': gender,
+                #'age': age,
+                #'race': race,
+                #'state': state,
+		#'month': month,
+		#'day': day,
+		#'year': year,
+                #'NPI1': NPI1,
+                #'NPI2': NPI2,
+                #'NPI3': NPI3,
+                #'NPI4': NPI4,
+                #'NPI5': NPI5}
+        #features = pd.DataFrame (data,index=[0])
+        #return features
 
-input_df = user_input_features()
+#input_df = user_input_features()
 
 #GENDER CODE(FRONT END AND BACK END INTEGRATION)
 def output_gender():
