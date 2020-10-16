@@ -98,7 +98,7 @@ def output_race():
 race_output = output_race()
 
 #AGE CODE(FRONT END AND BACK END INTEGRATION)
-def output_age(age):
+def output_age():
 	probability = agedataframe(age)
 	return probability 
 age_output = output_age()
