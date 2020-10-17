@@ -78,13 +78,13 @@ gender_output = output_gender()
 
 #RACE CODE(FRONT END AND BACK END INTEGRATION)
 def output_race():
-	probability = functiontouse(race)
+	probability = rc.functiontouse(race)
 	return probability
 race_output = output_race()
 
 #AGE CODE(FRONT END AND BACK END INTEGRATION)
 def output_age():
-	probability = agedataframe(age)
+	probability = ag.agedataframe(age)
 	return probability 
 age_output = output_age()
 
