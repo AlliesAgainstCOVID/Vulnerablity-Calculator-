@@ -10,15 +10,7 @@ import Gender_Code as gen
 import Race_Code as rc
 import Location_Code as loc
 
-#image = Image.open('AI_19_image.jpg')
-#st.image (image, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-#st.image (image, caption='A COVID-19 Mortality Risk Predictor', width=None)
 
-#The code below was to keep the sidebar expanded. We won't need this as we have the blinking arrows and txt that says click here to input your data 
-#st.beta_set_page_config(
-#	layout="wide",
-#	initial_sidebar_state="expanded"
-#)
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -27,13 +19,6 @@ def local_css(file_name):
 local_css("style.css")
 st.sidebar.subheader ("Select your inputs")
 
-
-#st.sidebar(fixed=True)
-#st.set_page_config(initial_sidebar_state="expanded")
-#st.sidebar.header ("Select your inputs")
-#st.sidebar.subheader ("Select your inputs")
-
-#st.sidebar.text ("")
 
 gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
 age = st.sidebar.selectbox("Select Age group",("Under 1 year", "1-4 years", "5-14 years", "15-24 years", "25-34 years", "35-44 years", "45-54 years", "55-64 years", "65-74 years", "75-84 years", "85 years and over"))
