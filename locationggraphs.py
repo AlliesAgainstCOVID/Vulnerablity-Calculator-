@@ -73,6 +73,4 @@ def locationgraph(state):
   plt.xlabel('Date') 
   plt.ylabel('Deaths') 
 
-state = input("Enter your state")
-locationgraph(state)
 
