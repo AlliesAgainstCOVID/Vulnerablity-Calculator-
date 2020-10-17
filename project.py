@@ -90,9 +90,7 @@ age_output = output_age()
 
 # LOCATION CODE 
 def output_location():
-	#strdate = year+month+date
-	#probability = loc.location_data(state, strdate) #add in strdate once it is inititalized#
-	probability = 13
+	probability = loc.location_data(state) #add in strdate once it is inititalized#
 	return probability
 location_output = output_location()
 
