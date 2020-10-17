@@ -136,7 +136,7 @@ if st.sidebar.button('Submit'):
     if age == "65-74 years" or age == "75-84 years" or age == "85 years and over":
         st.markdown(""" Statistical analysis on CDC Data shows that older age groups 65 years and above are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. Learn more here: https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
     #Other statements
-    if age != "Under 1 year" or age != "1-4 years" and NPI2 == 0:
+    if NPI2 == 0 and age != "Under 1 year" or age != "1-4 years":
         st.markdown(""" We strongly urge you to please start wearing masks when going out to public areas. According to the CDC, there are many studies that show masks can prevent the spread of respiratory droplets from the mouth, nose, and parts of the face. This is for your safety and others.
         Learn more here: 
         https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html """, unsafe_allow_html=True)
@@ -146,8 +146,8 @@ if st.sidebar.button('Submit'):
 else:
     imageone = Image.open('AI_19_image_05.jpg')
     st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
-#st.write("Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com")
-#st.write("Disclaimer: Please note that the information in this web app is not medical advice but rather precautionary guidelines. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. All information is for educational purposes only. Thank you!")
+st.write("Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com")
+st.write("Disclaimer: Please note that the information in this web app is not medical advice but rather precautionary guidelines. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. All information is for educational purposes only. Thank you!")
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
     gauge = {
