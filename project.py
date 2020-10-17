@@ -131,7 +131,7 @@ imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', us
 if st.sidebar.button('Submit'):
     image = Image.open('AI-19Logo.JPG')	
     st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
-    cg.render_gauge((int(output_df3)))
+    cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
     if age == "65-74 years" or age == "75-84 years" or age == "85 years and over":
         st.markdown(""" Statistical analysis on CDC Data shows that older age groups 65 years and above are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. Learn more here: https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
