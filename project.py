@@ -97,7 +97,7 @@ if st.sidebar.button('Submit'):
     st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
-    if NPI2 == 0 and (age != "Under 1 year" or age != "1-4 years"):
+    if NPI2 == 0 and age != "Under 1 year":
         st.markdown(""" We strongly urge you to please start wearing masks when going out to public areas. According to the CDC, there are many studies that show masks can prevent the spread of respiratory droplets from the mouth, nose, and parts of the face. This is for your safety and others.
         Learn more here: 
         https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html """, unsafe_allow_html=True)
