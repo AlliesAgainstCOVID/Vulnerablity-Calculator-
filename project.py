@@ -9,6 +9,7 @@ import Age_Code as ag
 import Gender_Code as gen
 import Race_Code as rc
 import Location_Code as loc
+import locationggraphs as locgraphs
 
 
 
@@ -59,9 +60,16 @@ age_output = output_age()
 
 # LOCATION CODE(FRONT END AND BACK END INTEGRATION) 
 def output_location():
-	probability = loc.location_data(state) #add in strdate once it is inititalized#
+	probability = loc.location_data(state) 
 	return probability
 location_output = output_location()
+
+#LocationGraphs (commented for now)
+
+#def locationGraph():
+#	locgraph = locgraphs.locationgraph(state)
+#	return locgraph
+#printlocgraph = locationGraph()
 
 # NPI CODE(FRONT END AND BACK END INTEGRATION)
 def output_NPI():
