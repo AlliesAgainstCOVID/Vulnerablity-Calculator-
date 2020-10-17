@@ -11,11 +11,20 @@ A. Gender:
 	6. Save as "GenderCOVID-19Deathsdata.csv"
 	7. Upload to Github under Covid_AGRAJ-master/.
 	
-B. Age
+B. Age:
        1. Go to https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-W/vsak-wrfu/data
        2. Before exporting, set the following filters: "End Week is after 06/01/2020" and "Sex is All Sex".
        3. Export the CSV and save for Excel locally 
        4. Open with excel
        5 Convert to float *NEED TO CHECK
        6. Save as "AgeCOVID-19DeathsData.csv"
+       7. Upload to Github under Covid_AGRAJ-master/.
+       
+C. Race:
+       1. Go to https://covidtracking.com/race
+       2. Scroll down and click "Get the complete dataset (CSV)", which will download the dataset to your device. 
+       3. Open with Excel
+       4. Drop or delete the following columns: "Cases_Total", "Cases_White", "Cases_Black", "Cases_LatinX", "Cases_Asian", "Cases_AIAN", "Cases_NHPI", "Cases_Multiracial", "Cases_Other", "Cases_Unknown", "Cases_Ethnicity_Hispanic", "Cases_Ethnicity_NonHispanic", "Cases_Ethnicity_Unknown", "Deaths_Total", "Deaths_Other", "Deaths_Unknown", "Deaths_Ethnicity_Hispanic", "Deaths_Ethnicity_NonHispanic", "Deaths_Ethnicity_Unknown". 
+       5. Replace any empty cells with a "0". 
+       6. Save as "RaceDeathCOVIDFinal.csv"
        7. Upload to Github under Covid_AGRAJ-master/.
