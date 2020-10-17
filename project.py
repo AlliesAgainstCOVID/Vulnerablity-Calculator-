@@ -129,7 +129,7 @@ imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', us
 # With results: no instructions, gauge, help text, banner image
 
 if st.sidebar.button('Submit'):
-    image = Image.open('AI_19Logo.jpg')	
+    image = Image.open('AI_19Logo.JPG')	
     st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(output_df3)))
     #AGE PERSONALIZED MESSAGE. 
