@@ -2,26 +2,12 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
  
- #FOR THE UI - YOU MAY DELETE LATER
- #dropdown = for day
- #dropdown = for month (has to be in 08 format for single digit months and 11 for double digit months)
- #dropdown = for year (2020 default)
- #strdate = year+month+date
- #pass the strdate to the location code
- #probability = location(state, strdate)
+def location_data(state):
  
-def location_data(state, strdate):
- 
-  #THESE HAVE BEEN COMMENTED OUT --> JUST FOR REFERENCE TO SHOW WHAT WAS INCLUDED IN THE LOCATION CODE BEFORE
-    #month = input("Enter the month in the format: 08\n")
-    #date = input("Enter the day of the month:\n")
-    #year = input("Enter the year: \n")
-    #strval = year+month+date
     #ask_state = input("What state do you live in?\n")
-
     state_abbrev = {"Alabama" : "al", "Alaska" : "ak", "Arizona": "az", "Arkansas": "ar", "California": "ca","Colorado": "co","Connecticut": "ct", "Delaware": "de","Florida": "fl","Georgia":"ga","Hawaii": "hi","Idaho":"id","Illinois": "il", "Indiana": "in","Iowa":"ia", "Kansas": "ks","Kentucky": "ky","Louisiana": "la","Maine": "me", "Maryland": "md", "Massachusetts": "ma", "Michigan": "mi", "Minnesota": "mn", "Mississippi":"ms","Missouri": "mo", "Montana": "mt","Nebraska": "ne","Nevada": "nv","New Hampshire": "nh","New Jersey": "nj","New Mexico": "nm","New York": "ny","North Carolina": "nc","North Dakota": "nd","Ohio": "oh","Oklahoma":"ok","Oregon": "or","Pennsylvania": "pa" ,"Rhode Island": "ri","South Carolina": "sc","South Dakota": "sd", "Tennessee": "tn", "Texas": "tx","Utah": "ut","Vermont": "vt","Virginia": "va", "Washington": "wa","West Virginia": "wv", "Wisconsin": "wi", "Wyoming": "wy"}
  
-    getState = state_abbrev.get(state)
+    state = state_abbrev.get(ask_state)
     
     #state = input("Please enter the abbreviated form of your state in a lowercase format: \n")
     csv_url = "https://covidtracking.com/api/v1/states/"+state+"/daily.csv"
@@ -41,17 +27,18 @@ def location_data(state, strdate):
     rawy = df.get("death")
     Y = rawy[::-1]
     y = np.array(Y)
- 
-    date_pred = int(strdate)
- 
+
+    for i in range(len(df)):
+      dateval = df.iloc[i, 0]
+      break
+
+    date_pred = int(dateval)
+
     clf = LinearRegression()
     clf.fit(x,y)
  
     val1 = clf.predict([[date_pred]])
     a = (totaldeaths.get(state))
     final_location = val1/a*100
-
-    print("\nLocation percentage is " + str(final_location) + "%")
-    
-    return(final_location)
-    
+    final = float(final_location)
+    return(final)
