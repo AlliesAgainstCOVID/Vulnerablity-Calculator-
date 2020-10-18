@@ -18,16 +18,17 @@ def local_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
+st.title ("AI-19: COVID-19 Mortality Risk Predictor")
 
-st.beta_set_page_config(
-        page_title="AI-19: COVID-19 Mortality Risk Predictor",
-        page_icon="🧊",
-        layout="wide",
-        initial_sidebar_state="auto",
-  )
+#st.beta_set_page_config(
+#        page_title="AI-19: COVID-19 Mortality Risk Predictor",
+#        page_icon="🧊",
+#        layout="wide",
+#        initial_sidebar_state="auto",
+#  )
 #st.sidebar.title ("AI-19: COVID-19 Mortality Risk Predictor")
 st.sidebar.text ("")
-st.sidebar.subheader ("Select your inputs")
+st.sidebar.header ("Select your inputs")
 
 
 gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
