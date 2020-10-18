@@ -19,6 +19,7 @@ def local_css(file_name):
 
 local_css("style.css")
 st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+imageone = Image.open('AI_19_image_05.jpg')
 
 #st.beta_set_page_config(
 #        page_title="AI-19: COVID-19 Mortality Risk Predictor",
@@ -28,7 +29,7 @@ st.title ("AI-19: COVID-19 Mortality Risk Predictor")
 #  )
 #st.sidebar.title ("AI-19: COVID-19 Mortality Risk Predictor")
 st.sidebar.text ("")
-st.sidebar.header ("Select your inputs")
+st.sidebar.header ("Select your inputs:")
 
 
 gender = st.sidebar.selectbox("Select Gender",("Male", "Female"))
