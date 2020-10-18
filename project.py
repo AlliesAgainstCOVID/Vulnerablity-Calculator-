@@ -95,21 +95,20 @@ def aggregate_calc():
     return final_probability
 finalprob = aggregate_calc()
 
-st.title ("AI-19: COVID-19 Mortality Risk Predictor")
-st.write("")
-st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")
+#st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+#st.write("")
+#st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")
 
-imageLocation = st.empty()
-imageone = Image.open('AI_19_image_05.jpg')
-imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+#imageLocation = st.empty()
+#imageone = Image.open('AI_19_image_05.jpg')
+#imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 
 
 if st.sidebar.button('Submit'):
+    st.title ("AI-19: Your COVID-19 Mortality Rate")	
     imagesubmit = Image.open('AI_19logo.jpg')
     imageLocation.image (imagesubmit)
-    #imresized = imagesubmit.resize(40, 20)
-    #imageLocation.image(imresized)
-    st.markdown(""" <h1 style='text-align: center; color: blue;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
+    #st.markdown(""" <h1 style='text-align: center; color: blue;'>Your COVID-19 Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
     if NPI2 == 0 and age != "Under 1 year":
@@ -118,11 +117,18 @@ if st.sidebar.button('Submit'):
         * Learn more here: 
         https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html """, unsafe_allow_html=True)
     else:
-        st.write("Please continue to social distance(6ft. between you and others) and wear a mask in public. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor and healthcare provider for working on a care plan that can help for emergencies during the pandemic. ")
+        st.write("* Please continue to social distance(6ft. between you and others) and wear a mask in public. If you experience any symptoms, please isolate yourself and get tested as soon as possible. Additionally, if you have any underlying medical conditions, it’s recommended to talk with your doctor and healthcare provider for working on a care plan that can help for emergencies during the pandemic. ")
     if age == "65-74 years" or age == "75-84 years" or age == "85 years and over":
         st.markdown(""" * Statistical analysis on CDC Data shows that older age groups 65 years and above are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. 
 	* To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. Learn more here: https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
-
+else:
+st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+st.write("")
+st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")	
+imageLocation = st.empty()
+imageone = Image.open('AI_19_image_05.jpg')
+imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+	
 # Code for disclaimer and contact info to be displayed on the UI
 st.write("")
 st.markdown(""" <h6 style = 'color: grey; font-size: small font-style: italic'> Disclaimer: Please note that the information in this web app is for educational purposes only. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider.</h6> """, unsafe_allow_html=True)
