@@ -1,4 +1,3 @@
-#Blinking sidepanel arrow 
 @keyframes blink {
     0% { border-color: #f63366; }
     50% { border-color: #FFFFFF; }
@@ -37,7 +36,6 @@
     display: flex;
     justify-content: center;
  
-# To remove empty space on top of the page    
 .sidebar .sidebar-content{
     padding: 0.5rem 0.5rem!important;
 }
