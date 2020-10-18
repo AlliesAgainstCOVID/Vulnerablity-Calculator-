@@ -107,9 +107,9 @@ finalprob = aggregate_calc()
 imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_05.jpg')
-st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+#st.title ("AI-19: COVID-19 Mortality Risk Predictor")
 imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-#st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
+st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
 
 if st.sidebar.button('Submit'):
