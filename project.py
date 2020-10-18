@@ -105,10 +105,10 @@ finalprob = aggregate_calc()
 
 
 if st.sidebar.button('Submit'):
-    st.title ("AI-19: Your COVID-19 Mortality Rate")
     imageLocation = st.empty()
     imagesubmit = Image.open('AI_19logo.jpg')
     imageLocation.image (imagesubmit)
+    st.title ("AI-19: Your COVID-19 Mortality Rate")
     #st.markdown(""" <h1 style='text-align: center; color: blue;'>Your COVID-19 Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
@@ -125,7 +125,7 @@ if st.sidebar.button('Submit'):
 else:
     st.title ("AI-19: COVID-19 Mortality Risk Predictor")
     st.write("")
-    st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")	
+    st.write("To get the results of your COVID-19 mortality risk, please enter your details in the left sidebar.")	
     imageLocation = st.empty()
     imageone = Image.open('AI_19_image_05.jpg')
     imageLocation.image (imageone, use_column_width=True)
