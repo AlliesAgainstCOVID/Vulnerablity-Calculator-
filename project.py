@@ -125,14 +125,15 @@ if st.sidebar.button('Submit'):
 else:
     st.title ("AI-19: COVID-19 Mortality Risk Predictor")
     st.write("")
-    st.write("* To get the results of your COVID-19 mortality risk, please enter your details in the left sidebar.* ")	
+    st.write(" To get the results of your COVID-19 mortality risk, please enter your details in the left sidebar. ")	
     imageLocation = st.empty()
     imageone = Image.open('AI_19_image_05.jpg')
     imageLocation.image (imageone, use_column_width=True)
 	
 # Code for disclaimer and contact info to be displayed on the UI
 st.write("")
-st.markdown(""" <h6 style = 'color: grey; font-size: small font-style: italic'> Disclaimer: * Please note that the information in this web app is for educational purposes only. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. *</h6> """, unsafe_allow_html=True)
+st.markdown(""" <h6 style = 'color: grey; font-size: small font-style: italic'> Disclaimer:  Please note that the information in this web app is for educational purposes only. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. </h6> """, unsafe_allow_html=True)
+st.write("")
 st.markdown(""" <h4 style = 'color: black; text-align: center'><b> Contact us: alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
