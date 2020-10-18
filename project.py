@@ -11,22 +11,24 @@ import Race_Code as rc
 import Location_Code as loc
 import locationggraphs as locgraphs
 
-
+st.beta_set_page_config(
+        page_title="AI-19: COVID-19 Mortality Risk Predictor",
+        page_icon="🧊",
+        layout="wide",
+        initial_sidebar_state="auto",
+  )
 
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
-st.title ("AI-19: COVID-19 Mortality Risk Predictor")
-imageone = Image.open('AI_19_image_05.jpg')
+#st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+#imageone = Image.open('AI_19_image_05.jpg')
+#st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
 
-#st.beta_set_page_config(
-#        page_title="AI-19: COVID-19 Mortality Risk Predictor",
-#        page_icon="🧊",
-#        layout="wide",
-#        initial_sidebar_state="auto",
-#  )
+
+
 #st.sidebar.title ("AI-19: COVID-19 Mortality Risk Predictor")
 st.sidebar.text ("")
 st.sidebar.header ("Select your inputs:")
