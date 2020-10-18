@@ -11,19 +11,20 @@ import Race_Code as rc
 import Location_Code as loc
 import locationggraphs as locgraphs
 
-st.beta_set_page_config(
-        page_title="AI-19: COVID-19 Mortality Risk Predictor",
-        page_icon="🧊",
-        layout="wide",
-        initial_sidebar_state="auto",
-  )
+#This does not seem to be working - It would be good to see if can be made to worl - will solve our isue of opening the app in mobils & desktop - AH-10/17
+#st.beta_set_page_config(
+#        page_title="AI-19: COVID-19 Mortality Risk Predictor",
+#        page_icon="🧊",
+#        layout="wide",
+#        initial_sidebar_state="auto",
+#  )
 
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
-#st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+st.title ("AI-19: COVID-19 Mortality Risk Predictor")
 #imageone = Image.open('AI_19_image_05.jpg')
 #st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
 
@@ -106,13 +107,14 @@ finalprob = aggregate_calc()
 imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_05.jpg')
-# imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-#st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
+st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
 
 if st.sidebar.button('Submit'):
     image = Image.open('AI-19Logo.JPG')	
-    st.markdown(""" <h1 style='text-align: center; color: red;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
+    st.markdown(""" <h1 style='text-align: center; color: blue;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
     if NPI2 == 0 and age != "Under 1 year":
