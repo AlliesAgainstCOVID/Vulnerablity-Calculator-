@@ -122,12 +122,12 @@ if st.sidebar.button('Submit'):
         st.markdown(""" * Statistical analysis on CDC Data shows that older age groups 65 years and above are more vulnerable to COVID-19, and these findings are consistent with sources such as the World Health Organization. 
 	* To minimize mortality risk as much as possible, please make sure to limit interactions with other people and travelling to gatherings or outside environments like care facilities. Learn more here: https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
 else:
-st.title ("AI-19: COVID-19 Mortality Risk Predictor")
-st.write("")
-st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")	
-imageLocation = st.empty()
-imageone = Image.open('AI_19_image_05.jpg')
-imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+    st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+    st.write("")
+    st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")	
+    imageLocation = st.empty()
+    imageone = Image.open('AI_19_image_05.jpg')
+    imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 	
 # Code for disclaimer and contact info to be displayed on the UI
 st.write("")
