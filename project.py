@@ -18,7 +18,15 @@ def local_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
-st.sidebar.title ("AI-19: COVID-19 Mortality Risk Predictor")
+
+st.beta_set_page_config(
+        page_title="AI-19: COVID-19 Mortality Risk Predictor",
+        page_icon="🧊",
+        layout="wide",
+        initial_sidebar_state="auto",
+  )
+#st.sidebar.title ("AI-19: COVID-19 Mortality Risk Predictor")
+st.sidebar.text ("")
 st.sidebar.subheader ("Select your inputs")
 
 
@@ -29,7 +37,7 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
             "Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
             "New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
             "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"))
-# A st.sidebar.text ("")
+
 st.sidebar.subheader ("Do you:")
 st.text ("")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
@@ -94,9 +102,7 @@ finalprob = aggregate_calc()
 imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_05.jpg')
-#st.image(imageone, caption='A COVID-19 Mortality Risk Predictor', width=None)
-#im_resizedone = imageone.resize((100, 80))
-imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+# imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 #st.write("To get your results on your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
 
 
