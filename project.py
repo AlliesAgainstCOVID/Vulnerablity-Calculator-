@@ -105,7 +105,7 @@ st.write("To get the results of your COVID-19 mortality risk, please fill out th
 
 
 if st.sidebar.button('Submit'):
-    imagesubmit = Image.open('AI-19Logo.JPG')
+    imagesubmit = Image.open('AI_19logo.jpg')
     #imresized = imagesubmit.resize(40, 20)
     #imageLocation.image(imresized)
     st.markdown(""" <h1 style='text-align: center; color: blue;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
