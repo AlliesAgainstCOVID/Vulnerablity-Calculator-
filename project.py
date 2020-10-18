@@ -18,7 +18,6 @@ def local_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
-st.sidebar.title ("AI-19: COVID-19 Mortality Risk Predictor")
 st.sidebar.subheader ("Select your inputs")
 
 
@@ -119,7 +118,7 @@ else:
     imageone = Image.open('AI_19_image_05.jpg')
     st.markdown("To get your results on your COVID-19 mortality risk, please select your inputs in the sidebar on the left.")
 st.write("")
-st.markdown(""" <h6 style = 'color: red;'> Disclaimer: Please note that the information in this web app is not medical advice but rather precautionary guidelines. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. All information is for educational purposes only. Thank you!</h6> """, unsafe_allow_html=True)
+st.markdown(""" <h6 style = 'color: red;'> Disclaimer: Please note that the information in this web app is for educational purposes only and not intended for decision making. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. Thank you!</h6> """, unsafe_allow_html=True)
 st.markdown(""" <h4 style = 'color: red;'><b> Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
