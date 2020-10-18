@@ -1,4 +1,4 @@
-# Blinking sidepanel arrow 
+#Blinking sidepanel arrow 
 @keyframes blink {
     0% { border-color: #f63366; }
     50% { border-color: #FFFFFF; }
