@@ -113,7 +113,7 @@ st.write("To get your results on your COVID-19 mortality risk, please fill out t
 
 
 if st.sidebar.button('Submit'):
-    image = Image.open = ('AI-19Logo.JPG')
+    image = Image.open('AI-19Logo.JPG')
     st.markdown(""" <h1 style='text-align: center; color: blue;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
@@ -128,8 +128,8 @@ if st.sidebar.button('Submit'):
 
 # Code for disclaimer and contact info to be displayed on the UI
 st.write("")
-st.markdown(""" <h6 style = 'color: red;'> Disclaimer: Please note that the information in this web app is for educational purposes only and not intended for decision making. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. Thank you!</h6> """, unsafe_allow_html=True)
-st.markdown(""" <h4 style = 'color: red;'><b> Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
+st.markdown(""" <h6 style = 'color: black; font-size: small'> Disclaimer: Please note that the information in this web app is for educational purposes only and not intended for decision making. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. Thank you!</h6> """, unsafe_allow_html=True)
+st.markdown(""" <h4 style = 'color: black; style="text-align: center;'><b> Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
     gauge = {
