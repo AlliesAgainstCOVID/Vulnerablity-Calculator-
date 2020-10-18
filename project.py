@@ -127,7 +127,7 @@ else:
     st.write("")
     st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")	
     imageone = Image.open('AI_19_image_05.jpg')
-    imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+    #imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 	
 # Code for disclaimer and contact info to be displayed on the UI
 st.write("")
