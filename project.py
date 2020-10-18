@@ -128,8 +128,10 @@ if st.sidebar.button('Submit'):
 
 # Code for disclaimer and contact info to be displayed on the UI
 st.write("")
-st.markdown(""" <h6 style = 'color: black; font-size: small'> Disclaimer: Please note that the information in this web app is for educational purposes only and not intended for decision making. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. Thank you!</h6> """, unsafe_allow_html=True)
-st.markdown(""" <h4 style = 'color: black; style="text-align: center;'><b> Questions or Thoughts? Contact us at alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
+st.markdown(""" <h6 style = 'color: black; font-size: small'> Disclaimer: Please note that the information in this web app is for educational purposes only. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider.</h6> """, unsafe_allow_html=True)
+link = 'alliesagainstcovid@gmail.com'
+st.markdown(link, unsafe_allow_html=True)
+st.markdown(""" <h4 style = 'color: black; text-align: center'><b> Contact us at alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
     gauge = {
