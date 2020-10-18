@@ -100,7 +100,7 @@ finalprob = aggregate_calc()
 imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_05.jpg')
-imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+#imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")
 
 
@@ -112,7 +112,7 @@ if st.sidebar.button('Submit'):
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
     if NPI2 == 0 and age != "Under 1 year":
-        st.markdown(""" We strongly urge you to please start wearing masks when going out to public areas. According to the CDC, there are many studies that show masks can prevent the spread of respiratory droplets from the mouth, nose, and parts of the face. This is for your safety and others.
+        st.markdown(""" * We strongly urge you to please start wearing masks when going out to public areas. * According to the CDC, there are many studies that show masks can prevent the spread of respiratory droplets from the mouth, nose, and parts of the face. * This is for your safety and others.
         Learn more here: 
         https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html """, unsafe_allow_html=True)
     else:
