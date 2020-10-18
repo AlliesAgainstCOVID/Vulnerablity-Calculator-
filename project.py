@@ -24,7 +24,6 @@ def local_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
-st.title ("AI-19: COVID-19 Mortality Risk Predictor")
 st.sidebar.header ("Select your inputs:")
 
 
@@ -96,16 +95,17 @@ def aggregate_calc():
     return final_probability
 finalprob = aggregate_calc()
 
+st.title ("AI-19: COVID-19 Mortality Risk Predictor")
 
 imageLocation = st.empty()
-
 imageone = Image.open('AI_19_image_05.jpg')
-#imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
+imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
 st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")
 
 
 if st.sidebar.button('Submit'):
     imagesubmit = Image.open('AI_19logo.jpg')
+    imageLocation.image (imagesubmit)
     #imresized = imagesubmit.resize(40, 20)
     #imageLocation.image(imresized)
     st.markdown(""" <h1 style='text-align: center; color: blue;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
