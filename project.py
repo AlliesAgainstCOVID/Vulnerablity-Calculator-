@@ -101,13 +101,13 @@ imageLocation = st.empty()
 
 imageone = Image.open('AI_19_image_05.jpg')
 imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the sidebar on the left.")
+st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")
 
 
 if st.sidebar.button('Submit'):
     imagesubmit = Image.open('AI-19Logo.JPG')
-    im_su_resized = imagesubmit.resize(40, 20)
-    imageLocation.image(im_su_resized)
+    #imresized = imagesubmit.resize(40, 20)
+    #imageLocation.image(imresized)
     st.markdown(""" <h1 style='text-align: center; color: blue;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
@@ -122,8 +122,8 @@ if st.sidebar.button('Submit'):
 
 # Code for disclaimer and contact info to be displayed on the UI
 st.write("")
-st.markdown(""" <h6 style = 'color: black; font-size: small'> Disclaimer: Please note that the information in this web app is for educational purposes only. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider.</h6> """, unsafe_allow_html=True)
-st.markdown(""" <h4 style = 'color: black; text-align: center'><b> Contact us at alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
+st.markdown(""" <h6 style = 'color: grey; font-size: small font-style: italic'> Disclaimer: Please note that the information in this web app is for educational purposes only. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider.</h6> """, unsafe_allow_html=True)
+st.markdown(""" <h4 style = 'color: black; text-align: center'><b> Contact us: alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
     gauge = {
