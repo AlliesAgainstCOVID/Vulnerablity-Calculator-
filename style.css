@@ -26,7 +26,8 @@
 .fullScreenFrame > div {
     display: flex;
     justify-content: center;
-    
+
+ /* blinking sidebar arrow    */
 @keyframes blink {
     0% { border-color: #f63366; }
     50% { border-color: #FFFFFF; }
@@ -35,6 +36,12 @@
 .sidebar-collapse-control button{
     animation: blink 1.0s linear infinite;
 }
+/* remove empty space on top of the screen 
+    
 .sidebar .sidebar-content{
     padding: 0.1rem 0.1rem!important;
+}*/
+    
+.page .entry-wrap {
+	padding: 0;
 }
