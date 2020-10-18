@@ -113,7 +113,7 @@ st.write("To get your results on your COVID-19 mortality risk, please fill out t
 
 
 if st.sidebar.button('Submit'):
-    #image = Image.open('AI-19Logo.JPG')-COMMENTED TO REMOVE IMAGE(KV)	
+    image = Image.close('AI_19_image_05.jpg')
     st.markdown(""" <h1 style='text-align: center; color: blue;'>Your Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
