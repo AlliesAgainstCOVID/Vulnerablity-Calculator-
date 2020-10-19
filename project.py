@@ -87,15 +87,6 @@ def aggregate_calc():
     return final_probability
 finalprob = aggregate_calc()
 
-#st.title ("AI-19: COVID-19 Mortality Risk Predictor")
-#st.write("")
-#st.write("To get the results of your COVID-19 mortality risk, please fill out the fields in the left sidebar.")
-
-#imageLocation = st.empty()
-#imageone = Image.open('AI_19_image_05.jpg')
-#imageLocation.image (imageone, caption='A COVID-19 Mortality Risk Predictor', use_column_width=True)
-
-
 if st.sidebar.button('Submit'):
     imageLocation = st.empty()
     imagesubmit = Image.open('AI_19logo.jpg')
@@ -116,7 +107,7 @@ if st.sidebar.button('Submit'):
 	Learn more here: 
 	https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
 else:
-    st.title ("AI-19 Advisor: A COVID-19 Mortality Risk Predictor")
+    st.title ("AI-19 Advisor: COVID-19 Mortality Risk Predictor")
  #   st.write("")
     st.write(" To get the results of your COVID-19 mortality risk, please enter your details in the left sidebar. ")	
     imageLocation = st.empty()
