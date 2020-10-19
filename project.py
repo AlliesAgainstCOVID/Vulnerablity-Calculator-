@@ -11,13 +11,6 @@ import Race_Code as rc
 import Location_Code as loc
 import locationggraphs as locgraphs
 
-#This does not seem to be working - It would be good to see if can be made to worl - will solve our isue of opening the app in mobils & desktop - AH-10/17
-#st.beta_set_page_config(
-#        page_title="AI-19: COVID-19 Mortality Risk Predictor",
-#        page_icon="🧊",
-#        layout="wide",
-#        initial_sidebar_state="auto",
-#  )
 
 def local_css(file_name):
     with open(file_name) as f:
@@ -107,7 +100,7 @@ if st.sidebar.button('Submit'):
     imageLocation = st.empty()
     imagesubmit = Image.open('AI_19logo.jpg')
     imageLocation.image (imagesubmit)
-    st.title ("AI-19: Your COVID-19 Mortality Rate")
+    st.title ("AI-19 Advisor: Your COVID-19 Mortality Rate")
     #st.markdown(""" <h1 style='text-align: center; color: blue;'>Your COVID-19 Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
@@ -123,7 +116,7 @@ if st.sidebar.button('Submit'):
 	Learn more here: 
 	https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
 else:
-    st.title ("AI-19: COVID-19 Mortality Risk Predictor")
+    st.title ("AI-19 Advisor: A COVID-19 Mortality Risk Predictor")
  #   st.write("")
     st.write(" To get the results of your COVID-19 mortality risk, please enter your details in the left sidebar. ")	
     imageLocation = st.empty()
@@ -134,8 +127,7 @@ else:
 st.write("")
 st.markdown(""" <h6 style = 'color: grey; font-size: small font-style: italic'> Disclaimer:  Please note that the information in this web app is for educational purposes only. Although it has involved content from medical professionals, it has not been endorsed by any doctor/healthcare provider. </h6> """, unsafe_allow_html=True)
 st.write("")
-#st.markdown(""" <h4 style = 'color: black; text-align: center'><b> Contact us: alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
-st.markdown(""" <h4 style = 'color: black; text-align: center'><b> Contact Us:</b> alliesagainstcovid@gmail.com </h4> """, unsafe_allow_html=True)
+st.markdown(""" <h4 style = 'color: black; text-align: center'><b> Contact us: alliesagainstcovid@gmail.com </b></h4> """, unsafe_allow_html=True)
 fig = go.Figure(go.Indicator(
     mode = "number+gauge+delta", value = finalprob,
     gauge = {
