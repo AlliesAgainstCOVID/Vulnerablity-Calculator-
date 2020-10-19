@@ -36,11 +36,11 @@ state = st.sidebar.selectbox("Select your state",("Alabama", "Alaska", "Arizona"
             "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"))
 
 st.sidebar.subheader ("Do you:")
-st.text ("")
+#st.text ("")
 NPI1 = st.sidebar.checkbox ("Practice social distancing?")
 NPI2 = st.sidebar.checkbox ("Wear mask in public spaces?")
 st.sidebar.subheader ("Does your state:")
-st.text ("")
+#st.text ("")
 NPI3 = st.sidebar.checkbox ("Restrict mass gatherings?")
 NPI4 = st.sidebar.checkbox  ("Limit business re-openings?")#("Non-essential business closures?")
 NPI5 = st.sidebar.checkbox ("Take measures to isolate symptomatic individuals and their contacts?")			      
