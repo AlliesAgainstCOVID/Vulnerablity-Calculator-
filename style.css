@@ -26,7 +26,7 @@
 .fullScreenFrame > div {
     display: flex;
     justify-content: center;
-
+}
  /* blinking sidebar arrow    */
 @keyframes blink {
     0% { border-color: #f63366; }
