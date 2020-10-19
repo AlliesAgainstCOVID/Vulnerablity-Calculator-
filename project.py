@@ -91,7 +91,7 @@ if st.sidebar.button('Submit'):
     imageLocation = st.empty()
     imagesubmit = Image.open('AI_19logo.jpg')
     imageLocation.image (imagesubmit)
-    st.title ("AI-19 Advisor: Your COVID-19 Mortality Rate")
+    st.title ("AI-19: Your COVID-19 Mortality Rate")
     #st.markdown(""" <h1 style='text-align: center; color: blue;'>Your COVID-19 Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
@@ -107,7 +107,7 @@ if st.sidebar.button('Submit'):
 	Learn more here: 
 	https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
 else:
-    st.title ("AI-19 Advisor: COVID-19 Mortality Risk Predictor")
+    st.title ("AI-19: A COVID-19 Mortality Risk Predictor")
  #   st.write("")
     st.write(" To get the results of your COVID-19 mortality risk, please enter your details in the left sidebar. ")	
     imageLocation = st.empty()
