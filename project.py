@@ -92,6 +92,7 @@ if st.sidebar.button('Submit'):
     imagesubmit = Image.open('AI_19logo.jpg')
     imageLocation.image (imagesubmit)
     st.title ("AI-19: Your COVID-19 Mortality Rate")
+    st.write("Use the left sidebar to change your input details. ")	
     #st.markdown(""" <h1 style='text-align: center; color: blue;'>Your COVID-19 Mortality Rate</h1> """, unsafe_allow_html=True)
     cg.render_gauge((int(finalprob))) #output_df3
     #AGE PERSONALIZED MESSAGE. 
