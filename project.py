@@ -107,7 +107,7 @@ if st.sidebar.button('Submit'):
 	Learn more here: 
 	https://www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html """, unsafe_allow_html=True)
 else:
-    st.title ("AI-19: A COVID-19 Mortality Risk Predictor")
+    st.title ("AI-19: COVID-19 Mortality Risk Predictor")
  #   st.write("")
     st.write(" To get the results of your COVID-19 mortality risk, please enter your details in the left sidebar. ")	
     imageLocation = st.empty()
