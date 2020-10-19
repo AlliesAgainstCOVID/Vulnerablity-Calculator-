@@ -37,6 +37,6 @@
     animation: blink 1.0s linear infinite;
 }
 /* remove empty space on top of the screen */  
-.sidebar .sidebar-content{
+.sidebar .sidebar-content, .block-container{
     padding: 0.5rem 0.5rem!important;
 }
