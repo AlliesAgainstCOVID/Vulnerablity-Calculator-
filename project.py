@@ -71,10 +71,10 @@ location_output = output_location()
 
 #LocationGraphs (commented for now)
 
-def locationGraph():
-	locgraph = locgraphs.locationgraph(state)
-	return locgraph
-printlocgraph = locationGraph()
+#def locationGraph():
+	#locgraph = locgraphs.locationgraph(state)
+	#return locgraph
+#printlocgraph = locationGraph()
 
 # NPI CODE(FRONT END AND BACK END INTEGRATION)
 def output_NPI():
